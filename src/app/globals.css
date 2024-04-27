@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* To change the pallete tone, you can access: https://palette.tone-row.com/  */
+
+:root {
+  --color-background: #fafafa;
+  --color-foreground: #222222;
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f1f1f1;
+  --color-neutral-200: #e0e0e0;
+  --color-neutral-300: #cbcbcb;
+  --color-neutral-400: #999999;
+  --color-neutral-500: #6a6a6a;
+  --color-neutral-600: #4c4c4c;
+  --color-neutral-700: #393939;
+  --color-neutral-800: #222222;
+  --color-neutral-900: #181818;
+  --color-accent: #1f9eff;
+  --color-accent-50: #f2f8ff;
+  --color-accent-100: #e2f1ff;
+  --color-accent-200: #c0e3ff;
+  --color-accent-300: #8cceff;
+  --color-accent-400: #56b7ff;
+  --color-accent-500: #1f9eff;
+  --color-accent-600: #277dd6;
+  --color-accent-700: #2464ab;
+  --color-accent-800: #21558b;
+  --color-accent-900: #1f4771;
+}
