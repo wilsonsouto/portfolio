@@ -13,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className='bg-background text-foreground dark:bg-foreground dark:text-background'>{children}</body>
+      <body className='m-auto flex max-w-5xl gap-52 bg-foreground px-4 py-20 text-background'>{children}</body>
     </html>
   );
 }

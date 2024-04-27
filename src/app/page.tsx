@@ -12,18 +12,18 @@ export default function Header() {
   };
 
   return (
-    <div className='m-auto flex max-w-7xl gap-52 px-10 py-20'>
+    <>
       <header className='relative'>
         <nav className='fixed py-2'>
-          <ul className={`flex min-w-36 flex-col gap-6 text-xl`}>
-            <span
-              style={{ top: `${position}%` }}
-              className={`absolute left-0 -z-10 h-1/5 w-full rounded-md bg-accent-300 transition-all duration-300 ease-in-out`}
-            ></span>
+          <span
+            style={{ top: `${position}%` }}
+            className={`absolute left-0 -z-10 h-1/5 w-full rounded-md bg-accent-300 transition-all duration-300 ease-in-out`}
+          ></span>
+          <ul className={`flex flex-col gap-6 text-xl`}>
             {menu.map((item, index) => (
               <li
                 key={index}
-                className={`cursor-pointer px-4 duration-300 ${item.section === activeSection ? 'text-neutral-900' : 'hover:text-accent-300 dark:text-neutral-400'}`}
+                className={`cursor-pointer px-4 duration-300 ${item.section === activeSection ? 'text-neutral-900' : 'text-neutral-300 hover:text-accent-300'}`}
                 onClick={() => handleClick(item.section, item.position)}
               >
                 {item.section}
@@ -34,10 +34,10 @@ export default function Header() {
       </header>
       <main>
         <section className='flex flex-col gap-6'>
-        {menu.map((item) => item.section === activeSection && item.prop)}
+          {menu.map((item) => item.section === activeSection && item.prop)}
         </section>
       </main>
-    </div>
+    </>
   );
 }
 
