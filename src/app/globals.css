@@ -6,26 +6,26 @@
 
 :root {
   --color-background: #fafafa;
-  --color-foreground: #222222;
+  --color-foreground: #112233;
   --color-neutral-50: #fafafa;
-  --color-neutral-100: #f1f1f1;
-  --color-neutral-200: #e0e0e0;
-  --color-neutral-300: #cbcbcb;
-  --color-neutral-400: #999999;
-  --color-neutral-500: #6a6a6a;
-  --color-neutral-600: #4c4c4c;
-  --color-neutral-700: #393939;
-  --color-neutral-800: #222222;
-  --color-neutral-900: #181818;
-  --color-accent: #1f9eff;
-  --color-accent-50: #f2f8ff;
-  --color-accent-100: #e2f1ff;
-  --color-accent-200: #c0e3ff;
-  --color-accent-300: #8cceff;
-  --color-accent-400: #56b7ff;
-  --color-accent-500: #1f9eff;
-  --color-accent-600: #277dd6;
-  --color-accent-700: #2464ab;
-  --color-accent-800: #21558b;
-  --color-accent-900: #1f4771;
+  --color-neutral-100: #eef1f4;
+  --color-neutral-200: #d9dfe4;
+  --color-neutral-300: #c2cad3;
+  --color-neutral-400: #8e99a3;
+  --color-neutral-500: #5e6a76;
+  --color-neutral-600: #3e4c5a;
+  --color-neutral-700: #2a3949;
+  --color-neutral-800: #112233;
+  --color-neutral-900: #09192a;
+  --color-accent: #f9c784;
+  --color-accent-50: #fef8ed;
+  --color-accent-100: #fff1d8;
+  --color-accent-200: #fddfb2;
+  --color-accent-300: #f9c784;
+  --color-accent-400: #f4a049;
+  --color-accent-500: #f28219;
+  --color-accent-600: #e26700;
+  --color-accent-700: #bb4e00;
+  --color-accent-800: #963b00;
+  --color-accent-900: #7a3000;
 }
