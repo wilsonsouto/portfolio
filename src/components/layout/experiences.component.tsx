@@ -1,4 +1,4 @@
-import { Heading, Paragraph } from '../typography';
+import { Heading, Paragraph, Subtitle } from '../typography';
 
 interface ExperiencesProps {
   company: string;
@@ -22,9 +22,9 @@ export default function Experiences() {
       <Heading text='Experiences' />
       {experiences.map((item, index) => (
         <div className='flex flex-col gap-4' key={index}>
-          <h3 className='text-xl text-accent-300'>
+          <Subtitle>
             {item.company} - {item.role}
-          </h3>
+          </Subtitle>
           <span className='italic text-neutral-400'>
             {item.startDate} - {item.endDate}
           </span>
@@ -39,7 +39,7 @@ export default function Experiences() {
             </ul>
           )}
           <Paragraph>
-            <span className='font-bold text-neutral-200'>Skills: </span>
+            <span className='font-bold text-neutral-300'>Skills: </span>
             {item.skills}
           </Paragraph>
           {index !== experiences.length - 1 && <hr className='border-neutral-700 text-accent-600' />}
