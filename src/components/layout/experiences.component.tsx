@@ -1,5 +1,20 @@
 import { Heading, Paragraph } from '../typography';
 
+interface ExperiencesProps {
+  company: string;
+  role: string;
+  startDate: string;
+  endDate: string;
+  description: string;
+  responsibility: boolean;
+  res1?: string;
+  res2?: string;
+  res3?: string;
+  res4?: string;
+  res5?: string;
+  skills: string;
+}
+
 export default function Experiences() {
   return (
     <>
@@ -13,7 +28,7 @@ export default function Experiences() {
             {item.startDate} - {item.endDate}
           </span>
           <Paragraph>{item.description}</Paragraph>
-          {item.responsibilitie && (
+          {item.responsibility && (
             <ul className='flex w-full list-inside list-disc flex-col gap-4 text-lg text-neutral-300'>
               <li>{item.res1}</li>
               <li>{item.res2}</li>
@@ -33,7 +48,7 @@ export default function Experiences() {
   );
 }
 
-const experiences = [
+const experiences: ExperiencesProps[] = [
   {
     company: 'Intervalor',
     role: 'Systems Analyst',
@@ -41,7 +56,7 @@ const experiences = [
     endDate: 'Present',
     description:
       'Acting as the sole responsible for the application developed in Node.js at a credit recovery company, leading all stages of the operation and continuous improvement of micro-services, responsible for managing data from third-party team reports, and ensuring the communication and functioning of messaging services. My responsibilities include:',
-    responsibilitie: true,
+    responsibility: true,
     res1: "Developing and analyzing new projects within the application for each company client, focusing on the scalability and efficiency of the implemented solutions, according to each client's needs.",
     res2: 'Implementing new solutions and improvements in the application, always aiming to enhance its functionality, performance, usability, and the use of good security practices in data handling.',
     res3: 'Ensuring that information is inserted in the database and sent to internal and external APIs, prioritizing data integrity and security.',
@@ -57,6 +72,7 @@ const experiences = [
     endDate: 'Dezember 2022',
     description:
       'Engaging with a wide range of company tools and services, allowing for the creation of innovative and impactful solutions. One standout project is Pizzaria Donna, a landing page with a pizzeria-themed design, integrated with IBM Watson Assistant. This integration enabled the simulation of reports of domestic violence, using technology to promote awareness and aid for such a crucial issue.',
+    responsibility: false,
     skills:
       'JavaScript · HTML · CSS · IBM Watson Assistant · IBM Cognos Analytics · IBM LinuxONE · IBM Cloud · IBM Z · User Experience (UX) · User Interface (UI) · IBM Storage',
   },
@@ -67,6 +83,7 @@ const experiences = [
     endDate: 'Jul 2021',
     description:
       'Providing technical support to clients, configuring and installing routers and voice equipment, as well as monitoring and managing network changes, and liaising with service providers to restore circuits in the event of failures or interruptions.',
+    responsibility: false,
     skills: 'Putty · Cacti · Topdesk · SolarWinds Orion',
   },
 ];
