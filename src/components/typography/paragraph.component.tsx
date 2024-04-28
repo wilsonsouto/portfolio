@@ -1,7 +1,9 @@
+import React from 'react';
+
 interface ParagraphProps {
-  text: string;
+  children: React.ReactNode;
 }
 
-export default function Paragraph({ text }: ParagraphProps) {
-  return <p className='w-10/12 text-lg text-neutral-300'>{text}</p>;
+export default function Paragraph({ children }: ParagraphProps) {
+  return <p className='relative w-full text-lg text-neutral-300'>{children}</p>;
 }
