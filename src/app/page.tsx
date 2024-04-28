@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { About } from '@/components/layout';
+import { About, Experiences } from '@/components/layout';
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState('about');
@@ -33,7 +33,7 @@ export default function Header() {
         </nav>
       </header>
       <main>
-        <section className='flex flex-col gap-6'>
+        <section className='flex flex-col gap-4'>
           {menu.map((item) => item.section === activeSection && item.prop)}
         </section>
       </main>
@@ -43,7 +43,7 @@ export default function Header() {
 
 const menu = [
   { section: 'about', position: '0', prop: <About key={1} /> },
-  { section: 'experiences', position: '20' },
+  { section: 'experiences', position: '20', prop: <Experiences key={2} /> },
   { section: 'education', position: '41' },
   { section: 'projects', position: '62' },
   { section: 'contact', position: '82' },
