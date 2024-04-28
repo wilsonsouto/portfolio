@@ -73,7 +73,7 @@ const experiences: ExperiencesProps[] = [
     startDate: 'August 2021',
     endDate: 'Dezember 2022',
     description:
-      'Engaging with a wide range of company tools and services, allowing for the creation of innovative and impactful solutions. One standout project is Pizzaria Donna, a landing page with a pizzeria-themed design, integrated with IBM Watson Assistant. This integration enabled the simulation of reports of domestic violence, using technology to promote awareness and aid for such a crucial issue.',
+      'Engaging with a wide range of company tools and services, allowing for the creation of innovative and impactful solutions. One standout project is Pizzeria Donna, a landing page with a pizzeria-themed design, integrated with IBM Watson Assistant. This integration enabled the simulation of reports of domestic violence, using technology to promote awareness and aid for such a crucial issue.',
     skills:
       'JavaScript · HTML · CSS · IBM Watson Assistant · IBM Cognos Analytics · IBM LinuxONE · IBM Cloud · IBM Z · User Experience (UX) · User Interface (UI) · IBM Storage',
   },
