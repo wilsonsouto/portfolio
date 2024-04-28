@@ -5,5 +5,5 @@ interface ParagraphProps {
 }
 
 export default function Paragraph({ children }: ParagraphProps) {
-  return <p className='relative w-full text-lg text-neutral-300'>{children}</p>;
+  return <p className='relative text-lg text-neutral-300'>{children}</p>;
 }
