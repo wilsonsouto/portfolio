@@ -57,9 +57,9 @@ export default function Header() {
         )}
         {windowWidth < 768 && (
           <nav className='fixed left-0 top-0 z-50 flex w-full items-center justify-between rounded-sm p-4 text-xl backdrop-blur-md'>
-            <Link href="/" className='flex items-center gap-4'>
+            <Link href="/" className='flex items-center text-2xl gap-2'>
               <Image alt='favicon' src='/img/elements/favicon.svg' width={35} height={35} />
-              <span>Portfolio</span>
+              <span className='logo'>Portfolio</span>
             </Link>
             <Menu>
               {header.map((item, index) => (
@@ -85,7 +85,7 @@ export default function Header() {
 }
 
 const header: HeaderProps[] = [
-  { section: 'about', position: '0', component: <About key={1} /> },
+  { section: 'about', position: '-1', component: <About key={1} /> },
   { section: 'experiences', position: '20', component: <Experiences key={2} /> },
   { section: 'education', position: '41', component: <Education key={3} /> },
   { section: 'projects', position: '62', component: <Projects key={4} /> },
