@@ -13,7 +13,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className='m-auto flex max-w-4xl gap-52 bg-foreground px-4 py-20 text-background'>{children}</body>
+      <body className='m-auto flex max-w-4xl flex-col gap-20 bg-foreground p-4 text-background md:flex-row md:gap-52 md:py-20'>
+        {children}
+      </body>
     </html>
   );
 }
