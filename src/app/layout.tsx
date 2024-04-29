@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Next.js Starter Kit',
-  description: 'Start fast, build easy.',
+  title: 'Portfolio',
+  description: 'Portfolio showcasing my professional experiences, education, personal projects, and contact information.',
+  icons: "/img/elements/favicon.svg"
 };
 
 export default function RootLayout({
