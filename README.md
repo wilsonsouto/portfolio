@@ -1,16 +1,16 @@
 &#xa0;
 
-<h1 align="center">Next.js Starter Kit</h1>
+<h1 align="center">Portfolio</h1>
 
 <p align="center">
 
-<img alt="GitHub Top Language Badge" src="https://img.shields.io/github/languages/top/wilsonsouto/nextjs-starter-kit?style=flat&color=56BEB8"/>
+<img alt="GitHub Top Language Badge" src="https://img.shields.io/github/languages/top/wilsonsouto/portfolio?&color=56BEB8"/>
 
-<img alt="GitHub Language Count Badge" src="https://img.shields.io/github/languages/count/wilsonsouto/nextjs-starter-kit?style=flat&color=56BEB8"/>
+<img alt="GitHub Language Count Badge" src="https://img.shields.io/github/languages/count/wilsonsouto/portfolio?&color=56BEB8"/>
 
-<img alt="GitHub Repository Size Badge" src="https://img.shields.io/github/repo-size/wilsonsouto/nextjs-starter-kit?style=flat&color=56BEB8"/>
+<img alt="GitHub Repository Size Badge" src="https://img.shields.io/github/repo-size/wilsonsouto/portfolio?&color=56BEB8"/>
 
-<img alt="GitHub License Badge" src="https://img.shields.io/github/license/wilsonsouto/nextjs-starter-kit?style=flat&color=56BEB8"/>
+<img alt="GitHub License Badge" src="https://img.shields.io/github/license/wilsonsouto/portfolio?&color=56BEB8"/>
 
 </p>
 
@@ -28,21 +28,23 @@
 
 ## :dart: About
 
-The Next.js Starter Kit is a starting point for web application development. It provides an initial structure with basic configurations and functionalities already implemented, allowing you to start development quickly.
+Portfolio showcasing my professional experiences, education, personal projects, and contact information.
 
 ## :sparkles: Features
 
-:heavy_check_mark: Clean and organized for immediate use;\
-:heavy_check_mark: Prettier plugin and configurations for maintaining code organization and formatting;\
-:heavy_check_mark: Defined color variables for consistent styling throughout the project;
+:heavy_check_mark: **About**: A brief description about myself and interests;\
+:heavy_check_mark: **Experience**: Details about my professional experiences, including previous jobs and responsibilities;\
+:heavy_check_mark: **Education**: Information about my academic background, skills, relevant courses and languagues;\
+:heavy_check_mark: **Project**: Highlights of the projects I have worked on;\
+:heavy_check_mark: **Contact**: Direct contact information, including email, LinkedIn, and GitHub, to facilitate communication with potential collaborators;
 
 ## :rocket: Technologies
 
 The following tools were used in this project:
 
 - [React](https://pt-br.reactjs.org/)
-- [Next.js](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Next.js](https://nextjs.org/)
 - [TailwindCSS](https://tailwindcss.com/)
 
 ## :white_check_mark: Requirements
@@ -53,10 +55,10 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 ```bash
 # Clone this project
-$ git clone https://github.com/wilsonsouto/nextjs-starter-kit
+$ git clone https://github.com/wilsonsouto/portfolio
 
 # Access
-$ cd nextjs-starter-kit
+$ cd portfolio
 
 # Install dependencies
 $ npm install
