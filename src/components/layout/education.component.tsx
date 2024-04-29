@@ -69,8 +69,7 @@ export default function Education() {
                       className='relative flex items-center gap-2 hover:text-neutral-200'
                       href={item.course.prop1}
                     >
-                      <ArrowIcon />
-                      Do Zero ao Fullstack
+                      🡥 Do Zero ao Fullstack
                     </a>
                   </li>
                   <li>
@@ -79,8 +78,7 @@ export default function Education() {
                       className='relative flex items-center gap-2 hover:text-neutral-200'
                       href={item.course.prop2}
                     >
-                      <ArrowIcon />
-                      C# Programação Orientada a Objetos
+                      🡥 C# Programação Orientada a Objetos
                     </a>
                   </li>
                   <li className='relative'>
@@ -89,8 +87,7 @@ export default function Education() {
                       className='relative flex items-center gap-2 hover:text-neutral-200'
                       href={item.course.prop3}
                     >
-                      <ArrowIcon />
-                      Web Design, UX/UI Design, HTML, CSS, JavaScript e React
+                      🡥 Web Design, UX/UI Design, HTML, CSS, JavaScript e React
                     </a>
                   </li>
                 </>
@@ -100,17 +97,6 @@ export default function Education() {
         ))}
       </div>
     </>
-  );
-}
-
-function ArrowIcon() {
-  return (
-    <svg className='h-3 w-3' width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'>
-      <path
-        d='M2.07102 11.3494L0.963068 10.2415L9.2017 1.98864H2.83807L2.85227 0.454545H11.8438V9.46023H10.2955L10.3097 3.09659L2.07102 11.3494Z'
-        fill='currentColor'
-      ></path>
-    </svg>
   );
 }
 
