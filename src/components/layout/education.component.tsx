@@ -1,5 +1,6 @@
 import { Heading, Paragraph, Subtitle } from '../typography';
 import { ShadowCard } from '../cards';
+import Image from 'next/image';
 import './index.css';
 
 interface EducationProps {
@@ -43,7 +44,7 @@ export default function Education() {
         {skills.map((item, index) => (
           <div className='relative flex flex-col gap-4' key={index}>
             <Subtitle>{item.name}</Subtitle>
-            <img className='absolute -left-10 top-1 h-6 w-6' src={item.img} alt='mouse' />
+            <Image width={24} height={24} className='absolute -left-10 top-1 h-6 w-6' src={item.img} alt={item.name} />
             <ul className='flex flex-col text-lg text-neutral-400'>
               {item.stacks && (
                 <>
