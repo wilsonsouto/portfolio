@@ -15,7 +15,7 @@ export default function Projects() {
   return (
     <>
       <Heading text='Projects' />
-      <div className='flex flex-col gap-10'>
+      <div className='flex flex-col'>
         {projects.map((item, index) => (
           <ShadowCard key={index}>
             <div className='relative'>

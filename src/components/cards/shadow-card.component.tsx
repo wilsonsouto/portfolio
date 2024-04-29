@@ -4,7 +4,7 @@ interface ShadowCardProps {
 
 export function ShadowCard({ children }: ShadowCardProps) {
   return (
-    <div className='relative mt-4 flex h-full w-11/12 flex-col rounded-sm bg-accent-200 p-4 text-neutral-900'>
+    <div className='relative mb-8 mt-4 flex h-full w-11/12 flex-col rounded-sm bg-accent-200 p-4 text-neutral-900'>
       <div className='absolute z-[-1] mt-2 h-full w-full rounded-sm bg-neutral-950'></div>
       {children}
     </div>

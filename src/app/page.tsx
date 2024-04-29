@@ -64,7 +64,7 @@ export default function Header() {
               {header.map((item, index) => (
                 <li
                   key={index}
-                  className={`cursor-pointer px-4 duration-300 ${item.section === activeSection ? 'text-neutral-900' : 'text-neutral-300 hover:text-accent-300'}`}
+                  className={`cursor-pointer px-4 duration-300 ${item.section === activeSection ? 'text-accent-300' : 'text-neutral-400 hover:text-neutral-200'}`}
                   onClick={() => handleClick(item.section, item.position)}
                 >
                   {item.section}

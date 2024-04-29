@@ -39,7 +39,7 @@ export default function Education() {
           <span>FIAP - 2022</span>
         </div>
       </ShadowCard>
-      <div className='flex flex-col gap-10 pt-10'>
+      <div className='flex flex-col gap-8'>
         {skills.map((item, index) => (
           <div className='relative flex flex-col gap-4' key={index}>
             <Subtitle>{item.name}</Subtitle>
