@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { About, Experiences, Education, Projects, Contact } from '@/components/layout';
 import { Menu } from '@/components/elements';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface HeaderProps {
   section: string;
@@ -56,10 +57,10 @@ export default function Header() {
         )}
         {windowWidth < 768 && (
           <nav className='fixed left-0 top-0 z-50 flex w-full items-center justify-between rounded-sm p-4 text-xl backdrop-blur-md'>
-            <div className='flex items-center gap-4'>
+            <Link href="/" className='flex items-center gap-4'>
               <Image alt='favicon' src='/img/elements/favicon.svg' width={35} height={35} />
               <span>Portfolio</span>
-            </div>
+            </Link>
             <Menu>
               {header.map((item, index) => (
                 <li
