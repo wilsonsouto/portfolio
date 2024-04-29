@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { About, Experiences, Education } from '@/components/layout';
+import { About, Experiences, Education, Projects } from '@/components/layout';
 
 interface HeaderProps {
   section: string;
@@ -39,7 +39,7 @@ export default function Header() {
         </nav>
       </header>
       <main>
-        <section className='flex w-11/12 flex-col gap-4'>
+        <section className='flex w-full flex-col gap-4'>
           {header.map((item) => item.section === activeSection && item.component)}
         </section>
       </main>
@@ -51,6 +51,6 @@ const header: HeaderProps[] = [
   { section: 'about', position: '0', component: <About key={1} /> },
   { section: 'experiences', position: '20', component: <Experiences key={2} /> },
   { section: 'education', position: '41', component: <Education key={3} /> },
-  { section: 'projects', position: '62' },
+  { section: 'projects', position: '62', component: <Projects key={4} /> },
   { section: 'contact', position: '82' },
 ];
