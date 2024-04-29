@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { About, Experiences, Education, Projects } from '@/components/layout';
+import { About, Experiences, Education, Projects, Contact } from '@/components/layout';
 
 interface HeaderProps {
   section: string;
@@ -52,5 +52,5 @@ const header: HeaderProps[] = [
   { section: 'experiences', position: '20', component: <Experiences key={2} /> },
   { section: 'education', position: '41', component: <Education key={3} /> },
   { section: 'projects', position: '62', component: <Projects key={4} /> },
-  { section: 'contact', position: '82' },
+  { section: 'contact', position: '82', component: <Contact key={5} /> },
 ];
