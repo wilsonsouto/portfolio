@@ -16,6 +16,7 @@ export function Navbar(props: NavbarProps) {
   const handleClick = (section: string, position: string) => {
     props.setActiveSection(section);
     setPosition(position);
+    setMenu(!menu);
   };
 
   const toggleMenu = () => {
@@ -42,7 +43,7 @@ export function Navbar(props: NavbarProps) {
           {navbarData.map((item, index) => (
             <li
               key={index}
-              className={`cursor-pointer px-4 duration-300 ${item.section === props.activeSection ? 'text-neutral-900' : 'text-neutral-300 hover:text-accent-300'}`}
+              className={`cursor-pointer px-4 duration-300  ${item.section === props.activeSection ? 'text-neutral-900' : 'text-neutral-300 hover:text-accent-300'}`}
               onClick={() => handleClick(item.section, item.position)}
             >
               {item.section}
