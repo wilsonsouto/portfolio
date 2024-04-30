@@ -10,12 +10,12 @@ export default function Education() {
     <>
       <Heading text='Education' />
       <Paragraph>
-        I keep myself updated with online courses. My most recent academic experience was completing an Associate's
+        I keep myself updated with online courses. My most recent academic experience was completing an Associate&apos;s
         degree.
       </Paragraph>
       <ShadowCard>
         <span className='absolute top-[-15px] w-44 rounded-full bg-accent-600 p-1 text-center text-neutral-100'>
-          Associate's degree
+          Associate&apos;s degree
         </span>
         <div className='pt-2'>
           <h3 className='font-bold'>Systems Analysis and Development</h3>

@@ -7,7 +7,7 @@ export default function Contact() {
     <>
       <Heading text='Contact' />
       <Paragraph>
-        If you'd like to get in touch or just chat, feel free to contact me. I'm always open to new opportunities and
+        If you&apos;d like to get in touch or just chat, feel free to contact me. I&apos;m always open to new opportunities and
         conversations.
       </Paragraph>
       <ul className='flex items-center gap-4 text-2xl text-neutral-400'>
