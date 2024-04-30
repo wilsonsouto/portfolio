@@ -1,27 +1,9 @@
-import { Heading, Paragraph, Subtitle } from '../typography';
-import { ShadowCard } from '../cards';
+import { coursesData, languaguesData, skillsData } from '@/utils/education-data';
 import Image from 'next/image';
+import React, { ReactNode } from 'react';
+import { ShadowCard } from '../cards';
+import { Heading, Paragraph, Subtitle } from '../typography';
 import './index.css';
-
-interface EducationProps {
-  name: string;
-  img: string;
-  stacks?: {
-    prop1: string;
-    prop2: string;
-    prop3: string;
-    prop4: string;
-    prop5: string;
-    prop6: string;
-    prop7?: string;
-    prop8?: string;
-  };
-  course?: {
-    prop1: string;
-    prop2: string;
-    prop3: string;
-  };
-}
 
 export default function Education() {
   return (
@@ -40,101 +22,59 @@ export default function Education() {
           <span>FIAP - 2022</span>
         </div>
       </ShadowCard>
-      <div className='flex flex-col gap-8'>
-        {skills.map((item, index) => (
-          <div className='relative flex flex-col gap-4' key={index}>
-            <Subtitle>{item.name}</Subtitle>
-            <Image width={24} height={24} className='absolute -left-10 top-1 h-6 w-6' src={item.img} alt={item.name} />
-            <ul className='flex flex-col text-lg text-neutral-400'>
-              {item.stacks && (
-                <>
-                  <li className='text-neutral-200'>{item.stacks?.prop1}</li>
-                  <li className='mb-4'>{item.stacks?.prop2}</li>
-                  <li className='text-neutral-200'>{item.stacks?.prop3}</li>
-                  <li className='mb-4'>{item.stacks?.prop4}</li>
-                  <li className='text-neutral-200'>{item.stacks?.prop5}</li>
-                  <li className='mb-4'>{item.stacks?.prop6}</li>
-                  {item.stacks?.prop7 && item.stacks.prop8 && (
-                    <>
-                      <li className='text-neutral-200'>{item.stacks?.prop7}</li>
-                      <li>{item.stacks?.prop8}</li>
-                    </>
-                  )}
-                </>
-              )}
-              {item.course && (
-                <>
-                  <li>
-                    <a
-                      target='_blank'
-                      className='relative flex items-center gap-2 hover:text-neutral-200'
-                      href={item.course.prop1}
-                    >
-                      🡥 Do Zero ao Fullstack
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      target='_blank'
-                      className='relative flex items-center gap-2 hover:text-neutral-200'
-                      href={item.course.prop2}
-                    >
-                      🡥 C# Programação Orientada a Objetos
-                    </a>
-                  </li>
-                  <li className='relative'>
-                    <a
-                      target='_blank'
-                      className='relative flex items-center gap-2 hover:text-neutral-200'
-                      href={item.course.prop3}
-                    >
-                      🡥 Web Design, UX/UI Design, HTML, CSS, JavaScript e React
-                    </a>
-                  </li>
-                </>
-              )}
-            </ul>
-          </div>
-        ))}
+      <div className='flex flex-col gap-4'>
+        <ListContainer name='Skills' src='/img/elements/mouse.svg'>
+          {skillsData.map((item, index) => (
+            <ListItem key={index}>
+              <li className='text-neutral-300'>{item.skill}</li>
+              <li className='text-neutral-400'>{item.description}</li>
+            </ListItem>
+          ))}
+        </ListContainer>
+        <ListContainer name='Courses' src='/img/elements/book.svg'>
+          {coursesData.map((item, index) => (
+            <ListItem key={index}>
+              <li className='text-neutral-400'>
+                <a className='hover:text-neutral-300' target='_blank' href={item.link}>
+                  {item.course}
+                </a>
+              </li>
+            </ListItem>
+          ))}
+        </ListContainer>
+        <ListContainer name='Courses' src='/img/elements/book.svg'>
+          {languaguesData.map((item, index) => (
+            <ListItem key={index}>
+              <li className='text-neutral-300'>{item.language}</li>
+              <li className='text-neutral-400'>{item.nivel}</li>
+            </ListItem>
+          ))}
+        </ListContainer>
       </div>
     </>
   );
 }
 
-const skills: EducationProps[] = [
-  {
-    name: 'Skills',
-    img: './img/elements/mouse.svg',
-    stacks: {
-      prop1: 'Front-end Development',
-      prop2: 'HTML, CSS, SASS, JavaScript, TypeScript, TailwindCSS, React.js, Next.js',
-      prop3: 'Back-end Development',
-      prop4: 'Node.js, C#',
-      prop5: 'Database',
-      prop6: 'MySQL, MongoDB',
-      prop7: 'Development Tools',
-      prop8: 'Git, Postman, Jira',
-    },
-  },
-  {
-    name: 'Courses',
-    img: './img/elements/book.svg',
-    course: {
-      prop1: 'https://lp.b7web.com.br/fullstack?utm_source=home',
-      prop2: 'https://www.udemy.com/course/programacao-orientada-a-objetos-csharp/',
-      prop3: 'https://www.origamid.com/',
-    },
-  },
-  {
-    name: 'Languagues',
-    img: './img/elements/globe.svg',
-    stacks: {
-      prop1: 'Portuguese',
-      prop2: 'Fluent',
-      prop3: 'English',
-      prop4: 'Advanced',
-      prop5: 'Spanish',
-      prop6: 'Basic',
-    },
-  },
-];
+interface ListContainerProps {
+  name: string;
+  src: string;
+  children: ReactNode;
+}
+
+export const ListContainer = (props: ListContainerProps) => {
+  return (
+    <div className='relative flex flex-col gap-2'>
+      <Subtitle>{props.name}</Subtitle>
+      <Image width={24} height={24} className='absolute -left-10 top-1 h-6 w-6' src={props.src} alt={props.name} />
+      {props.children}
+    </div>
+  );
+};
+
+interface ListItemProps {
+  children: React.ReactNode;
+}
+
+export const ListItem = (props: ListItemProps) => {
+  return <ul className='flex flex-col text-lg'>{props.children}</ul>;
+};

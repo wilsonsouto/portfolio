@@ -1,24 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import { Menu } from '@/components/elements';
+import { navbarData } from '@/utils/navbar-data';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Menu } from '@/components/elements';
+import { useEffect, useState } from 'react';
 
 interface NavbarProps {
   activeSection: string;
   setActiveSection: (section: string) => void;
 }
 
-const arr = [
-  { section: 'about', position: '-1' },
-  { section: 'experiences', position: '20' },
-  { section: 'education', position: '41' },
-  { section: 'projects', position: '62' },
-  { section: 'contact', position: '82' },
-];
-
 export function Navbar(props: NavbarProps) {
   const [position, setPosition] = useState('0');
-  const [windowWidth, setWindowWidth] = useState(1280);
+  const [windowWidth, setWindowWidth] = useState(768);
 
   const handleClick = (section: string, position: string) => {
     props.setActiveSection(section);
@@ -45,8 +38,8 @@ export function Navbar(props: NavbarProps) {
             style={{ top: `${position}%` }}
             className={`absolute left-0 -z-10 h-1/5 w-full rounded-md bg-accent-300 transition-all duration-300 ease-in-out`}
           ></span>
-          <ul className={`flex flex-col gap-6 text-xl`}>
-            {arr.map((item, index) => (
+          <ul className={`hidden flex-col gap-6 text-xl md:flex`}>
+            {navbarData.map((item, index) => (
               <li
                 key={index}
                 className={`cursor-pointer px-4 duration-300 ${item.section === props.activeSection ? 'text-neutral-900' : 'text-neutral-300 hover:text-accent-300'}`}
@@ -65,7 +58,7 @@ export function Navbar(props: NavbarProps) {
             <span className='logo'>Portfolio</span>
           </Link>
           <Menu>
-            {arr.map((item, index) => (
+            {navbarData.map((item, index) => (
               <li
                 key={index}
                 className={`cursor-pointer px-4 duration-300 ${item.section === props.activeSection ? 'text-accent-300' : 'text-neutral-400 hover:text-neutral-200'}`}

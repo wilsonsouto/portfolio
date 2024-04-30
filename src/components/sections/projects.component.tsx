@@ -1,22 +1,16 @@
-import { Heading } from '../typography';
-import { ShadowCard } from '../cards';
+import { projectsData } from '@/utils/projects-data';
 import Image from 'next/image';
 import Link from 'next/link';
+import { ShadowCard } from '../cards';
+import { Heading } from '../typography';
 import './index.css';
-
-interface ProjectsProps {
-  project: string;
-  description: string;
-  href: string;
-  src: string;
-}
 
 export default function Projects() {
   return (
     <>
       <Heading text='Projects' />
       <div className='flex flex-col'>
-        {projects.map((item, index) => (
+        {projectsData.map((item, index) => (
           <ShadowCard key={index}>
             <div className='relative'>
               <div className='absolute left-0 top-0 h-full w-full opacity-0 duration-500 hover:bg-neutral-950 hover:opacity-90'>
@@ -48,26 +42,3 @@ export default function Projects() {
     </>
   );
 }
-
-const projects: ProjectsProps[] = [
-  {
-    project: 'Pizzeria Donna',
-    description:
-      'A landing page designed to resemble a pizzeria, but in reality, it serves as a domestic violence hotline.',
-    href: 'https://github.com/wilsonsouto/pizzeria-donna',
-    src: '/img/background/pizzeria-donna.jpg',
-  },
-  {
-    project: 'File Organizer',
-    description: 'A simple script that organizes files based on their extensions.',
-    href: 'https://github.com/wilsonsouto/file-organizer',
-    src: '/img/background/file-organizer.jpg',
-  },
-  {
-    project: 'Fake Blog',
-    description:
-      'Simulates a simple fake blog interface that fetches posts from the JSONPlaceholder API and allows users to add new posts.',
-    href: 'https://github.com/wilsonsouto/fake-blog',
-    src: '/img/background/fake-blog.jpg',
-  },
-];

@@ -1,15 +1,7 @@
 'use client';
-import { useState } from 'react';
 import { Navbar } from '@/components/layout';
-import { About, Experiences, Education, Projects, Contact } from '@/components/sections';
-
-const arr = [
-  { section: 'about', component: <About key={1} /> },
-  { section: 'experiences', component: <Experiences key={2} /> },
-  { section: 'education', component: <Education key={3} /> },
-  { section: 'projects', component: <Projects key={4} /> },
-  { section: 'contact', component: <Contact key={5} /> },
-];
+import { homeData } from '@/utils/home-data';
+import { useState } from 'react';
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState('about');
@@ -21,7 +13,12 @@ export default function Home() {
       </header>
       <main>
         <section className='flex w-full flex-col gap-4'>
-          {arr.map((item) => item.section === activeSection && item.component)}
+          {homeData.map((item) => {
+            if (item.section === activeSection) {
+              const Component = item.component;
+              return <Component key={item.section} />;
+            }
+          })}
         </section>
       </main>
     </>
