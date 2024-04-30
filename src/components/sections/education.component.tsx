@@ -61,6 +61,10 @@ interface ListContainerProps {
   children: ReactNode;
 }
 
+interface ListItemProps {
+  children: React.ReactNode;
+}
+
 export const ListContainer = (props: ListContainerProps) => {
   return (
     <div className='relative flex flex-col gap-2'>
@@ -70,10 +74,6 @@ export const ListContainer = (props: ListContainerProps) => {
     </div>
   );
 };
-
-interface ListItemProps {
-  children: React.ReactNode;
-}
 
 export const ListItem = (props: ListItemProps) => {
   return <ul className='flex flex-col text-lg'>{props.children}</ul>;
