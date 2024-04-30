@@ -42,7 +42,7 @@ export default function Education() {
             </ListItem>
           ))}
         </ListContainer>
-        <ListContainer name='Courses' src='/img/elements/book.svg'>
+        <ListContainer name='Languages' src='/img/elements/globe.svg'>
           {languaguesData.map((item, index) => (
             <ListItem key={index}>
               <li className='text-neutral-300'>{item.language}</li>
