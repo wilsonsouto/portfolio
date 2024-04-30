@@ -2,7 +2,7 @@ import { Menu } from '@/components/elements';
 import { navbarData } from '@/utils/navbar-data';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 interface NavbarProps {
   activeSection: string;
@@ -11,65 +11,45 @@ interface NavbarProps {
 
 export function Navbar(props: NavbarProps) {
   const [position, setPosition] = useState('0');
-  const [windowWidth, setWindowWidth] = useState(768);
+  const [menu, setMenu] = useState(true);
 
   const handleClick = (section: string, position: string) => {
     props.setActiveSection(section);
     setPosition(position);
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  const toggleMenu = () => {
+    setMenu(!menu);
+  };
 
   return (
     <>
-      {windowWidth >= 768 && (
-        <nav className='fixed py-2'>
-          <span
-            style={{ top: `${position}%` }}
-            className={`absolute left-0 -z-10 h-1/5 w-full rounded-md bg-accent-300 transition-all duration-300 ease-in-out`}
-          ></span>
-          <ul className={`hidden flex-col gap-6 text-xl md:flex`}>
-            {navbarData.map((item, index) => (
-              <li
-                key={index}
-                className={`cursor-pointer px-4 duration-300 ${item.section === props.activeSection ? 'text-neutral-900' : 'text-neutral-300 hover:text-accent-300'}`}
-                onClick={() => handleClick(item.section, item.position)}
-              >
-                {item.section}
-              </li>
-            ))}
-          </ul>
-        </nav>
-      )}
-      {windowWidth < 768 && (
-        <nav className='fixed left-0 top-0 z-50 flex w-full items-center justify-between rounded-sm p-4 text-xl backdrop-blur-md'>
-          <Link href='/' className='flex items-center gap-2 text-2xl'>
+      <nav className='fixed z-50 p-2 max-md:left-0 max-md:top-0 max-md:w-full max-md:p-0'>
+        <span
+          style={{ top: `${position}%` }}
+          className={`absolute left-0 -z-10 h-1/5 w-full rounded-md bg-accent-300 transition-all duration-300 ease-in-out max-md:hidden`}
+        ></span>
+        <div className='fixed left-0 top-0 hidden w-full flex-row items-center justify-between gap-2 p-4 text-2xl max-md:flex max-md:backdrop-blur-md'>
+          <Link href='/' className='flex gap-2'>
             <Image alt='favicon' src='/img/elements/favicon.svg' width={35} height={35} />
             <span className='logo'>Portfolio</span>
           </Link>
-          <Menu>
-            {navbarData.map((item, index) => (
-              <li
-                key={index}
-                className={`cursor-pointer px-4 duration-300 ${item.section === props.activeSection ? 'text-accent-300' : 'text-neutral-400 hover:text-neutral-200'}`}
-                onClick={() => handleClick(item.section, item.position)}
-              >
-                {item.section}
-              </li>
-            ))}
-          </Menu>
-        </nav>
-      )}
+          <Menu menu={menu} toggleMenu={toggleMenu} />
+        </div>
+        <ul
+          className={` ${menu ? 'right-full' : 'right-0'} flex flex-col gap-6 text-xl duration-200 max-md:fixed max-md:top-16 max-md:z-50 max-md:w-full max-md:rounded-b-md max-md:bg-neutral-700 max-md:py-4 max-md:text-end`}
+        >
+          {navbarData.map((item, index) => (
+            <li
+              key={index}
+              className={`cursor-pointer px-4 duration-300 ${item.section === props.activeSection ? 'text-neutral-900' : 'text-neutral-300 hover:text-accent-300'}`}
+              onClick={() => handleClick(item.section, item.position)}
+            >
+              {item.section}
+            </li>
+          ))}
+        </ul>
+      </nav>
     </>
   );
 }
