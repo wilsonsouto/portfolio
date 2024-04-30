@@ -28,15 +28,15 @@ export const skillsData: EducationProps[] = [
 
 export const coursesData: EducationProps[] = [
   {
-    course: '🡥 Do Zero ao Fullstack',
+    course: '🧷 Do Zero ao Fullstack',
     link: 'https://lp.b7web.com.br/fullstack?utm_source=home',
   },
   {
-    course: '🡥 C# Programação Orientada a Objetos',
+    course: '🧷 C# Programação Orientada a Objetos',
     link: 'https://www.udemy.com/course/programacao-orientada-a-objetos-csharp/',
   },
   {
-    course: '🡥 Web Design, UX/UI Design, HTML, CSS, JavaScript e React',
+    course: '🧷 Web Design, UX/UI Design, HTML, CSS, JavaScript e React',
     link: 'https://www.origamid.com/',
   },
 ];
