@@ -37,7 +37,7 @@ export function Navbar(props: NavbarProps) {
           <Menu menu={menu} toggleMenu={toggleMenu} />
         </div>
         <ul
-          className={` ${menu ? 'right-full' : 'right-0'} flex flex-col gap-6 text-xl duration-200 max-md:fixed max-md:top-16 max-md:z-50 max-md:w-full max-md:rounded-b-md max-md:bg-neutral-700 max-md:py-4 max-md:text-end`}
+          className={` ${menu ? 'max-md:right-full' : 'max-md:right-0 '} flex flex-col gap-6 text-xl max-md:fixed max-md:top-16 max-md:z-50 max-md:w-full max-md:rounded-b-md max-md:bg-neutral-700 max-md:py-4 max-md:text-end max-md:duration-300`}
         >
           {navbarData.map((item, index) => (
             <li
