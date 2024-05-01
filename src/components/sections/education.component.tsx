@@ -5,6 +5,7 @@ import React, { ReactNode } from 'react';
 import { ShadowCard } from '../cards';
 import { Heading, Paragraph, Subtitle } from '../typography';
 import './index.css';
+import { MdArrowOutward } from 'react-icons/md';
 
 export default function Education() {
   return (
@@ -36,7 +37,10 @@ export default function Education() {
           {coursesData.map((item, index) => (
             <ListItem key={index}>
               <li className='text-neutral-400'>
-                <a className='hover:text-neutral-300' target='_blank' href={item.link}>
+                <a className='flex items-center gap-1 hover:text-neutral-300' target='_blank' href={item.link}>
+                  <span>
+                    <MdArrowOutward className='h-5 w-5' />
+                  </span>
                   {item.course}
                 </a>
               </li>
