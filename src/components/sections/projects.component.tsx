@@ -1,3 +1,4 @@
+import { MarginYEnum } from '@/enums';
 import { projectsData } from '@/utils/projects-data';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -9,9 +10,9 @@ export default function Projects() {
   return (
     <>
       <Heading text='Projects' />
-      <div className='flex flex-col'>
+      <div className='flex flex-col gap-10'>
         {projectsData.map((item, index) => (
-          <ShadowCard key={index}>
+          <ShadowCard marginY={MarginYEnum.my0} key={index}>
             <div className='relative'>
               <div className='absolute left-0 top-0 h-full w-full opacity-0 duration-500 hover:bg-neutral-950 hover:opacity-90'>
                 <div className='absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 transform flex-col gap-4 px-6 py-2 text-center text-neutral-100'>

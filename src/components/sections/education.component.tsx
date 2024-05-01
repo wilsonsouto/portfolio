@@ -1,3 +1,4 @@
+import { MarginYEnum } from '@/enums';
 import { coursesData, languaguesData, skillsData } from '@/utils/education-data';
 import Image from 'next/image';
 import React, { ReactNode } from 'react';
@@ -13,7 +14,7 @@ export default function Education() {
         I keep myself updated with online courses. My most recent academic experience was completing an Associate&apos;s
         degree.
       </Paragraph>
-      <ShadowCard>
+      <ShadowCard marginY={MarginYEnum.my6}>
         <span className='absolute top-[-15px] w-44 rounded-full bg-accent-600 p-1 text-center text-neutral-100'>
           Associate&apos;s degree
         </span>
