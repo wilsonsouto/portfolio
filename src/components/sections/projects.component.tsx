@@ -10,7 +10,7 @@ export default function Projects() {
   return (
     <>
       <Heading text='Projects' />
-      <div className='flex flex-col gap-10'>
+      <div className='mb-3 flex flex-col gap-10'>
         {projectsData.map((item, index) => (
           <ShadowCard marginY={MarginYEnum.my0} key={index}>
             <div className='relative'>
