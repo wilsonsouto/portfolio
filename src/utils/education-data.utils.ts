@@ -41,7 +41,7 @@ export const coursesData: EducationProps[] = [
   },
 ];
 
-export const languaguesData: EducationProps[] = [
+export const languagesData: EducationProps[] = [
   {
     language: 'Portuguese',
     nivel: 'Fluent',

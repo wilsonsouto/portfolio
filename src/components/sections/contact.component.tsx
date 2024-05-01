@@ -1,4 +1,4 @@
-import { contactData } from '@/utils/contact-data';
+import { contactData } from '@/utils';
 import { Heading, Paragraph } from '../typography';
 import './index.css';
 

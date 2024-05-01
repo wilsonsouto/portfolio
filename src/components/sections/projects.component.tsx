@@ -1,5 +1,5 @@
 import { MarginYEnum } from '@/enums';
-import { projectsData } from '@/utils/projects-data';
+import { projectsData } from '@/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ShadowCard } from '../cards';

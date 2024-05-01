@@ -1,5 +1,5 @@
 import { MarginYEnum } from '@/enums';
-import { coursesData, languaguesData, skillsData } from '@/utils/education-data';
+import { coursesData, languagesData, skillsData } from '@/utils';
 import Image from 'next/image';
 import React, { ReactNode } from 'react';
 import { ShadowCard } from '../cards';
@@ -44,7 +44,7 @@ export default function Education() {
           ))}
         </ListContainer>
         <ListContainer name='Languages' src='/img/elements/globe.svg'>
-          {languaguesData.map((item, index) => (
+          {languagesData.map((item, index) => (
             <ListItem key={index}>
               <li className='text-neutral-300'>{item.language}</li>
               <li className='text-neutral-400'>{item.nivel}</li>

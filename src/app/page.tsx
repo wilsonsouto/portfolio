@@ -1,6 +1,6 @@
 'use client';
 import { Navbar } from '@/components/layout';
-import { homeData } from '@/utils/home-data';
+import { homeData } from '@/utils';
 import { useState } from 'react';
 
 export default function Home() {

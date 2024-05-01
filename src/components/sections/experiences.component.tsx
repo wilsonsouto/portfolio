@@ -1,4 +1,4 @@
-import { experiencesData } from '@/utils/experiences-data';
+import { experiencesData } from '@/utils';
 import { Heading, Paragraph, Subtitle } from '../typography';
 
 export default function Experiences() {

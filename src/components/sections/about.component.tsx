@@ -1,4 +1,4 @@
-import { aboutData } from '@/utils/about-data';
+import { aboutData } from '@/utils';
 import { Heading, Paragraph } from '../typography';
 import './index.css';
 
