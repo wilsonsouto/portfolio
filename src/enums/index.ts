@@ -1,4 +1,4 @@
-import { MarginYEnum } from './margin-y.enum';
-import { MarginXEnum } from './margin-y.enum';
+import { MarginYEnum } from './margin.enum';
+import { MarginXEnum } from './margin.enum';
 
 export { MarginXEnum, MarginYEnum };
