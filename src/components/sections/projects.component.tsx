@@ -14,8 +14,14 @@ export default function Projects() {
         {projectsData.map((item, index) => (
           <ShadowCard marginY={MarginYEnum.my0} key={index}>
             <div className='relative'>
-              <div className='absolute left-0 top-0 h-full w-full opacity-0 duration-500 hover:bg-neutral-950 hover:opacity-90'>
-                <div className='absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 transform flex-col gap-4 px-6 py-2 text-center text-neutral-100'>
+              <div
+                className='absolute left-0 top-0 h-full w-full opacity-0 duration-500 hover:bg-neutral-950 
+              hover:opacity-90'
+              >
+                <div
+                  className='absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 transform flex-col 
+                  gap-4 px-6 py-2 text-center text-neutral-100'
+                >
                   <h1 className='text-2xl'>{item.project}</h1>
                   <span className='max-md:hidden'>{item.description}</span>
                   <Link

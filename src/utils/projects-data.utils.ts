@@ -22,7 +22,8 @@ export const projectsData: ProjectsProps[] = [
   {
     project: 'Fake Blog',
     description:
-      'Simulates a simple fake blog interface that fetches posts from the JSONPlaceholder API and allows users to add new posts.',
+      'Simulates a simple fake blog interface that fetches posts from the JSONPlaceholder API and allows users to\
+      add new posts.',
     href: 'https://github.com/wilsonsouto/fake-blog',
     src: '/img/background/fake-blog.jpg',
   },
