@@ -10,7 +10,7 @@ interface NavbarProps {
 }
 
 export function Navbar(props: NavbarProps) {
-  const [position, setPosition] = useState('0');
+  const [position, setPosition] = useState('-1');
   const [menu, setMenu] = useState(true);
 
   const handleClick = (section: string, position: string) => {
