@@ -23,7 +23,7 @@ export class EducationComponent {
   public educations: Education[] = [
     {
       institution: {
-        name: 'FIAP (Faculdade de Informática e Administração Paulista)',
+        name: 'FIAP',
         href: 'https://www.fiap.com.br/',
       },
       startDate: 'Jan 2021',

@@ -29,7 +29,6 @@ export class ProjectsComponent {
         'HTML',
         'CSS',
         'SASS',
-        'GIT',
       ],
     },
     {

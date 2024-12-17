@@ -4,9 +4,9 @@
 />
 <article
   *ngFor="let education of educations"
-  class="rounded-lg py-1 print:py-0"
+  class="flex w-full flex-col gap-2 leading-none sm:gap-1 print:text-sm"
 >
-  <header class="flex items-center justify-between">
+  <header class="grid grid-cols-[1fr_auto] place-items-baseline">
     <!-- #region degree -->
     <div class="inline-flex gap-x-1 font-medium leading-none print:text-sm">
       <h2

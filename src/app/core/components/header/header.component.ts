@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   public title: string = 'Wilson Souto';
   public description: string =
-    'Software Developer 🚀 creating value by solving problems and building solutions.';
+    'Software Developer 🚀 creating value by solving problems and building solutions';
   public location: { href: string; name: string }[] = [
     {
       href: 'https://www.google.com/maps/place/S%C3%A3o+Paulo',
