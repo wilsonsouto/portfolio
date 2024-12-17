@@ -13,9 +13,7 @@
   </p>
   <!-- #endregion -->
   <!-- #region location-->
-  <p
-    class="flex max-w-md justify-center gap-2 text-pretty text-xs sm:justify-start"
-  >
+  <p class="flex max-w-md gap-2 text-pretty text-xs sm:justify-start">
     <a
       [attr.aria-label]="'Location: ' + item.name"
       *ngFor="let item of location"
@@ -30,7 +28,7 @@
   <!-- #region contact links -->
   <nav aria-label="Contact links">
     <ul
-      class="flex justify-center gap-x-1 pt-1 text-sm text-foreground/80 sm:justify-start print:hidden"
+      class="flex gap-x-1 pt-1 text-sm text-foreground/80 sm:justify-start print:hidden"
     >
       <li *ngFor="let contact of contactLinks">
         <a
