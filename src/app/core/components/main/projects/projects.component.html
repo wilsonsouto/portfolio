@@ -1,0 +1,50 @@
+<app-section-title
+  [attr.aria-label]="'Side Projects section'"
+  [heading]="'Side Projects'"
+/>
+<div
+  class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2"
+>
+  <article *ngFor="let project of projects" class="h-full">
+    <div class="flex h-full flex-col overflow-hidden rounded-lg border p-3">
+      <div class="flex flex-col space-y-1.5">
+        <div class="space-y-1">
+          <h1
+            [attr.aria-label]="'Project name: '"
+            class="text-base font-medium tracking-tight"
+          >
+            <a
+              class="inline-flex items-center gap-1 hover:underline"
+              target="_blank"
+              href="{{ project.href }}"
+            >
+              {{ project.name }}
+            </a>
+          </h1>
+          <p
+            [attr.aria-label]="'Project description: '"
+            class="text-pretty font-mono text-xs text-foreground print:text-[10px]"
+          >
+            {{ project.description }}
+          </p>
+        </div>
+      </div>
+      <div class="mt-auto flex text-pretty font-mono text-sm">
+        <div class="mt-2 flex list-none flex-wrap gap-1 p-0">
+          <ul
+            [attr.aria-label]="'Technologies used'"
+            class="mt-2 flex list-none flex-wrap gap-1 p-0"
+          >
+            <li *ngFor="let stack of project.stacks">
+              <div
+                class="focus:ring-ring 0 inline-flex items-center text-nowrap rounded-md border border-transparent bg-neutral-200 px-1 py-0 font-mono text-[10px] font-semibold text-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 print:px-1 print:py-0.5 print:text-[8px] print:leading-tight"
+              >
+                {{ stack }}
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
