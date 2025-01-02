@@ -1,6 +1,6 @@
 &#xa0;
 
-<h1 align="center">Angular Starter Kit</h1>
+<h1 align="center">Portfolio</h1>
 
 <p align="center">
 
