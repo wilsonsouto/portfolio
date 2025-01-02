@@ -28,13 +28,15 @@
 
 ## :dart: About
 
-The Angular Starter Kit is a starting point for web application development. It provides an initial structure with basic configurations and functionalities already implemented, allowing you to start development quickly.
+Portfolio showcasing my professional experiences, education, personal projects, and contact information.
 
 ## :sparkles: Features
 
-:heavy_check_mark: Clean and organized for immediate use;\
-:heavy_check_mark: Prettier plugin and configurations for maintaining code organization and formatting;\
-:heavy_check_mark: Defined color variables for consistent styling throughout the project;
+:heavy_check_mark: **About**: A brief description about myself;\
+:heavy_check_mark: **Work Experience**: Details about my professional experiences, including previous jobs and responsibilities;\
+:heavy_check_mark: **Education**: Overview about my academic backgrounds;\
+:heavy_check_mark: **Skills**: A summary of my technical expertise and proficiencies;\
+:heavy_check_mark: **Side Projects**: Highlights of the projects I have worked on;
 
 ## :rocket: Technologies
 
