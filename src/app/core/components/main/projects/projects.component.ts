@@ -1,0 +1,27 @@
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { SectionTitleComponent } from '@app/shared/components/section-title/section-title.component';
+
+interface Project {
+  name: string;
+  href: string;
+  description: string;
+  stacks: string[];
+}
+
+@Component({
+  selector: 'app-projects',
+  standalone: true,
+  imports: [CommonModule, SectionTitleComponent],
+  templateUrl: './projects.component.html',
+})
+export class ProjectsComponent {
+  projects: Project[] = [
+    {
+      name: 'File Organizer',
+      href: 'https://github.com/wilsonsouto/file-organizer',
+      description: 'A script that organizes files based on their extensions',
+      stacks: ['C#'],
+    },
+  ];
+}
