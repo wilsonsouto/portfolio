@@ -1,0 +1,42 @@
+<app-section-title
+  [attr.aria-label]="'Education section'"
+  [heading]="'Education'"
+/>
+<article
+  *ngFor="let education of educations"
+  class="flex w-full flex-col gap-2 leading-none sm:gap-1 print:text-sm"
+>
+  <header class="grid grid-cols-[1fr_auto] place-items-baseline">
+    <!-- #region degree -->
+    <div class="inline-flex gap-x-1 font-medium leading-none print:text-sm">
+      <h2
+        [attr.aria-label]="'Degree: ' + education.degree"
+        class="font-bold leading-none print:text-[12px]"
+      >
+        {{ education.degree }}
+      </h2>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region date-->
+    <app-date-span
+      [attr.aria-label]="
+        'Date: ' + education.startDate + ' – ' + education.endDate
+      "
+      [date]="education.startDate + ' – ' + education.endDate"
+    />
+    <!-- #endregion -->
+  </header>
+  <!-- #region institucional-->
+  <h3>
+    <a
+      [attr.aria-label]="'Institution name: ' + education.institution.name"
+      target="_blank"
+      class="text-sm font-normal italic leading-none hover:underline print:text-[12px]"
+      href="{{ education.institution.href }}"
+    >
+      {{ education.institution.name }}
+    </a>
+  </h3>
+  <!-- #endregion -->
+</article>
