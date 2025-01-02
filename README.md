@@ -4,13 +4,13 @@
 
 <p align="center">
 
-<img alt="GitHub Top Language Badge" src="https://img.shields.io/github/languages/top/wilsonsouto/angular-starter-kit?&color=56BEB8"/>
+<img alt="GitHub Top Language Badge" src="https://img.shields.io/github/languages/top/wilsonsouto/portfolio?&color=56BEB8"/>
 
-<img alt="GitHub Language Count Badge" src="https://img.shields.io/github/languages/count/wilsonsouto/angular-starter-kit?&color=56BEB8"/>
+<img alt="GitHub Language Count Badge" src="https://img.shields.io/github/languages/count/wilsonsouto/portfolio?&color=56BEB8"/>
 
-<img alt="GitHub Repository Size Badge" src="https://img.shields.io/github/repo-size/wilsonsouto/angular-starter-kit?&color=56BEB8"/>
+<img alt="GitHub Repository Size Badge" src="https://img.shields.io/github/repo-size/wilsonsouto/portfolio?&color=56BEB8"/>
 
-<img alt="Github License Badge" src="https://img.shields.io/github/license/wilsonsouto/angular-starter-kit?color=56BEB8">
+<img alt="Github License Badge" src="https://img.shields.io/github/license/wilsonsouto/portfolio?color=56BEB8">
 
 </p>
 
@@ -53,10 +53,10 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 ```bash
 # Clone this project
-$ git clone https://github.com/wilsonsouto/angular-starter-kit
+$ git clone https://github.com/wilsonsouto/portfolio
 
 # Access
-$ cd angular-starter-kit
+$ cd portfolio
 
 # Install dependencies
 $ npm install
