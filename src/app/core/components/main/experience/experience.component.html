@@ -1,0 +1,72 @@
+<app-section-title
+  [attr.aria-label]="'Work experience section'"
+  [heading]="'Work Experience'"
+/>
+<article
+  *ngFor="let experience of experiences"
+  class="rounded-lg py-1 print:py-0"
+>
+  <header class="mb-4 flex items-center justify-between">
+    <div class="flex w-full flex-col gap-1 leading-none print:text-sm">
+      <div class="item-center flex w-full justify-between">
+        <!-- #region role -->
+        <h2
+          [attr.aria-label]="'Role: ' + experience.role"
+          class="font-bold leading-none print:text-[12px]"
+        >
+          {{ experience.role }}
+        </h2>
+        <!-- #endregion -->
+
+        <!-- #region date-->
+        <app-date-span
+          [attr.aria-label]="
+            'Date: ' + experience.startDate + ' – ' + experience.endDate
+          "
+          [date]="experience.startDate + ' – ' + experience.endDate"
+        />
+        <!-- #endregion -->
+      </div>
+      <div class="item-center flex w-full justify-between">
+        <!-- #region company-->
+        <h3>
+          <a
+            [attr.aria-label]="'Company name: ' + experience.company.name"
+            target="_blank"
+            class="text-sm font-normal italic leading-none hover:underline print:text-[12px]"
+            href="{{ experience.company.href }}"
+          >
+            {{ experience.company.name }}
+          </a>
+        </h3>
+        <!-- #endregion -->
+      </div>
+    </div>
+  </header>
+  <!-- #region responsabilities -->
+  <ul
+    class="list-inside list-disc text-pretty font-mono text-xs text-neutral-800/80 print:mt-1 print:text-[10px]"
+  >
+    <li
+      [attr.aria-label]="'Responsability: ' + responsability"
+      *ngFor="let responsability of experience.responsabilities"
+    >
+      {{ responsability }}
+    </li>
+  </ul>
+  <!-- #endregion -->
+
+  <!-- #region tech stacks -->
+  <ul
+    [attr.aria-label]="'Tech stacks'"
+    class="mt-2 flex list-none flex-wrap gap-x-1 gap-y-1 p-0"
+  >
+    <li
+      *ngFor="let stack of experience.stacks"
+      class="rounded border flex-grow text-center border-neutral-100 bg-neutral-200 px-2 py-1 text-xs font-medium"
+    >
+      {{ stack }}
+    </li>
+  </ul>
+  <!-- #endregion -->
+</article>
