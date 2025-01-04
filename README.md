@@ -28,7 +28,7 @@
 
 ## :dart: About
 
-Portfolio showcasing my professional experiences, education, personal projects, and contact information.
+👋 Welcome to my portfolio! This space showcases my journey as a developer, offering insight into my skills, projects, and professional experiences. Here, you can discover my background and the technologies I work with. Whether you're here to explore my projects or to connect, I'm excited to share my growth and contributions in the tech industry.
 
 ## :sparkles: Features
 
