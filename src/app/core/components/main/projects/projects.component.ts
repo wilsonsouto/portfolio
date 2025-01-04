@@ -18,6 +18,19 @@ interface Project {
 export class ProjectsComponent {
   projects: Project[] = [
     {
+      name: 'Pizzeria Donna',
+      href: 'https://github.com/wilsonsouto/pizzeria-donna',
+      description:
+        'Discreet chatbot assistance for women victims of domestic violence ',
+      stacks: [
+        'IBM Watson Assistant',
+        'Angular',
+        'TypeScript',
+        'HTML',
+        'TailwindCSS',
+      ],
+    },
+    {
       name: 'File Organizer',
       href: 'https://github.com/wilsonsouto/file-organizer',
       description: 'A script that organizes files based on their extensions',
