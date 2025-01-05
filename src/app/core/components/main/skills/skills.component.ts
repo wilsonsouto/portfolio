@@ -13,17 +13,15 @@ export class SkillsComponent {
     '.NET',
     'C#',
     'ASP.NET Core',
-    'MVC',
     'Microservices',
     'REST APIs',
     'RabbitMQ',
-    'SQL',
-    'NoSQL',
+    'SQL Server',
+    'MongoDB',
     'Docker',
     'Angular',
     'TypeScript',
     'HTML',
-    'CSS/SASS',
-    'TailwindCSS',
+    'TailwindCSS'
   ];
 }

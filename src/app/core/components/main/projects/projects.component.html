@@ -30,20 +30,17 @@
         </div>
       </div>
       <div class="mt-auto flex text-pretty font-mono text-sm">
-        <div class="mt-2 flex list-none flex-wrap gap-1 p-0">
-          <ul
-            [attr.aria-label]="'Technologies used'"
-            class="mt-2 flex list-none flex-wrap gap-1 p-0"
+        <ul
+          [attr.aria-label]="'Technologies used'"
+          class="mt-2 flex list-none flex-wrap gap-1"
+        >
+          <li
+            class="flex-1-ring 0 inline-flex items-center text-nowrap rounded-md border border-transparent bg-neutral-200 px-1 py-0 font-mono text-[11px] font-semibold text-foreground transition-colors focus:outline-none focus:ring focus:ring-offset-2"
+            *ngFor="let stack of project.stacks"
           >
-            <li *ngFor="let stack of project.stacks">
-              <div
-                class="focus:ring-ring 0 inline-flex items-center text-nowrap rounded-md border border-transparent bg-neutral-200 px-1 py-0 font-mono text-[11px] font-semibold text-foreground transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2"
-              >
-                {{ stack }}
-              </div>
-            </li>
-          </ul>
-        </div>
+            {{ stack }}
+          </li>
+        </ul>
       </div>
     </div>
   </article>
