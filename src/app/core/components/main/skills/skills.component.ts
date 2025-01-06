@@ -2,6 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { SectionTitleComponent } from '@app/shared/components/section-title/section-title.component';
 
+interface Props {
+  topic: string;
+  isVisible: boolean;
+  stacks: string[];
+}
+
 @Component({
   selector: 'app-skills',
   standalone: true,
@@ -9,19 +15,75 @@ import { SectionTitleComponent } from '@app/shared/components/section-title/sect
   templateUrl: './skills.component.html',
 })
 export class SkillsComponent {
-  public skills: string[] = [
-    '.NET',
-    'C#',
-    'ASP.NET Core',
-    'Microservices',
-    'REST APIs',
-    'RabbitMQ',
-    'SQL Server',
-    'MongoDB',
-    'Docker',
-    'Angular',
-    'TypeScript',
-    'HTML',
-    'TailwindCSS'
+  skills: Props[] = [
+    {
+      topic: 'Languages',
+      isVisible: false,
+      stacks: ['C#', 'HTML', 'CSS/SASS', 'TypeScript', 'Bash (Shell)'],
+    },
+    {
+      topic: 'Frameworks and Libraries',
+      isVisible: false,
+      stacks: [
+        '.NET',
+        'ASP.NET Core',
+        'Entity Framework (EF) Core',
+        'Angular',
+        'TailwindCSS',
+      ],
+    },
+    {
+      topic: 'Design Principles and Architecture',
+      isVisible: false,
+      stacks: [
+        'SOLID',
+        'Model-View-Controller (MVC)',
+        'Domain-Driven Design (DDD)',
+        'Microservices',
+        'Event-driven Architecture',
+      ],
+    },
+    {
+      topic: 'Integration and Messaging',
+      isVisible: false,
+      stacks: ['APIs (RESTful, HTTP, SOAP, GraphQL)', 'RabbitMQ'],
+    },
+    {
+      topic: 'Data Management',
+      isVisible: false,
+      stacks: [
+        'SQL (SQL Server, MySQL)',
+        'NoSQL (MongoDB, Elasticsearch, Redis)',
+      ],
+    },
+    {
+      topic: 'DevOps and Containers',
+      isVisible: false,
+      stacks: ['Docker', 'Kubernetes', 'Jenkins'],
+    },
+    {
+      topic: 'Operating Systems',
+      isVisible: false,
+      stacks: ['Linux (Ubuntu)', 'Windows'],
+    },
+    {
+      topic: 'Development Tools and Methodologies',
+      isVisible: false,
+      stacks: [
+        'Git',
+        'Postman',
+        'Test-Driven Development (TDD)',
+        'Scrum',
+        'Kanban',
+      ],
+    },
   ];
+
+  toggleVisibility(index: number) {
+    this.skills.forEach((skill, i) => {
+      i === index
+        ? (skill.isVisible = !skill.isVisible)
+        : (skill.isVisible = false);
+    });
+  }
 }
