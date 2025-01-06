@@ -59,11 +59,11 @@
   <!-- #region tech stacks -->
   <ul
     [attr.aria-label]="'Tech stacks'"
-    class="mt-2 flex list-none flex-wrap gap-x-1 gap-y-1 p-0"
+    class="mt-2 flex list-none flex-wrap gap-x-1 gap-y-1 p-0 text-center text-xs font-medium text-foreground"
   >
     <li
       *ngFor="let stack of experience.stacks"
-      class="rounded border flex-grow text-center border-neutral-100 bg-neutral-200 px-2 py-1 text-xs font-medium"
+      class="flex-grow rounded border border-neutral-100 bg-neutral-200 px-2 py-1"
     >
       {{ stack }}
     </li>
