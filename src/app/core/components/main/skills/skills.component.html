@@ -1,11 +1,11 @@
 <app-section-title [attr.aria-label]="'Skills section'" [heading]="'Skills'" />
 <nav>
-  <ul class="space-y-2">
+  <ul class="space-y-2 text-sm">
     <li *ngFor="let skill of skills; let i = index">
       <button
         [ngClass]="skill.isVisible ? 'bg-neutral-600' : 'bg-neutral-700'"
         (click)="toggleVisibility(i)"
-        class="flex w-full items-center gap-x-2 justify-between rounded-md px-4 py-2 text-left text-background hover:bg-neutral-600"
+        class="flex w-full items-center justify-between gap-x-2 rounded-md px-4 py-2 text-left text-background hover:bg-neutral-600"
       >
         <span [attr.aria-label]="skill.topic">{{ skill.topic }}</span>
         <i
@@ -14,7 +14,7 @@
       </button>
 
       <ul *ngIf="skill.isVisible" class="ml-6 mt-2 max-h-screen space-y-1">
-        <li *ngFor="let item of skill.stacks" class="text-sm text-foreground">
+        <li *ngFor="let item of skill.stacks" class="text-foreground">
           {{ item }}
         </li>
       </ul>
