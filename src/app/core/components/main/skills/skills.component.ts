@@ -40,7 +40,7 @@ export class SkillsComponent {
         'Model-View-Controller (MVC)',
         'Domain-Driven Design (DDD)',
         'Microservices',
-        'Event-driven Architecture',
+        'Event-driven Architecture (EDA)',
       ],
     },
     {
