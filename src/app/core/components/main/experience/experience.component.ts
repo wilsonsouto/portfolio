@@ -48,7 +48,7 @@ export class ExperienceComponent {
         'Entity Framework (EF) Core',
         'Model-View-Controller (MVC)',
         'Microservices',
-        'Event-driven',
+        'Event-driven Architecture (EDA)',
         'Domain-Driven Design (DDD)',
         'REST APIs',
         'GraphQL',
