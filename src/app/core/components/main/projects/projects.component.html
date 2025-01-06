@@ -5,9 +5,9 @@
 <div
   class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2"
 >
-  <article *ngFor="let project of projects" class="h-full">
+  <article *ngFor="let project of projects">
     <div class="flex h-full flex-col overflow-hidden rounded-lg border p-3">
-      <div class="flex flex-col space-y-1.5">
+      <div class="mb-2 flex flex-col space-y-1.5">
         <div class="space-y-1">
           <h1
             [attr.aria-label]="'Project name: '"
@@ -29,19 +29,17 @@
           </p>
         </div>
       </div>
-      <div class="mt-auto flex text-pretty font-mono text-sm">
-        <ul
-          [attr.aria-label]="'Technologies used'"
-          class="mt-2 flex list-none flex-wrap gap-1"
+      <ul
+        [attr.aria-label]="'Technologies used'"
+        class="mt-auto flex list-none flex-wrap gap-1 text-pretty font-mono text-sm font-semibold text-foreground"
+      >
+        <li
+          class="text-nowrap rounded-md border border-transparent bg-neutral-200 px-1 py-0 text-[11px]"
+          *ngFor="let stack of project.stacks"
         >
-          <li
-            class="flex-1-ring 0 inline-flex items-center text-nowrap rounded-md border border-transparent bg-neutral-200 px-1 py-0 font-mono text-[11px] font-semibold text-foreground transition-colors focus:outline-none focus:ring focus:ring-offset-2"
-            *ngFor="let stack of project.stacks"
-          >
-            {{ stack }}
-          </li>
-        </ul>
-      </div>
+          {{ stack }}
+        </li>
+      </ul>
     </div>
   </article>
 </div>
