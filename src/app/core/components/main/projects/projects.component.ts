@@ -27,7 +27,7 @@ export class ProjectsComponent {
         'Angular',
         'TypeScript',
         'HTML',
-        'TailwindCSS',
+        'Tailwind CSS',
       ],
     },
     {

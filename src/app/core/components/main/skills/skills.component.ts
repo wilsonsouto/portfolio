@@ -29,7 +29,7 @@ export class SkillsComponent {
         'ASP.NET Core',
         'Entity Framework (EF) Core',
         'Angular',
-        'TailwindCSS',
+        'Tailwind CSS',
       ],
     },
     {
@@ -59,7 +59,7 @@ export class SkillsComponent {
     {
       topic: 'DevOps and Containers',
       isVisible: false,
-      stacks: ['Docker', 'Kubernetes', 'Jenkins'],
+      stacks: ['Kubernetes', 'Jenkins', 'Docker'],
     },
     {
       topic: 'Operating Systems',
