@@ -45,7 +45,7 @@ The following tools were used in this project:
 - Angular
 - TypeScript
 - HTML
-- TailwindCSS
+- Tailwind CSS
 
 ## :white_check_mark: Requirements
 
