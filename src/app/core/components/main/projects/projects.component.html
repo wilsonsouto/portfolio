@@ -6,7 +6,9 @@
   class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2"
 >
   <article *ngFor="let project of projects">
-    <div class="flex h-full flex-col overflow-hidden rounded-lg border p-3">
+    <div
+      class="flex h-full flex-col overflow-hidden rounded-lg border p-3 lg:min-h-48"
+    >
       <div class="mb-2 flex flex-col space-y-1.5">
         <div class="space-y-1">
           <h1
