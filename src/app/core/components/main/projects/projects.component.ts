@@ -34,7 +34,13 @@ export class ProjectsComponent {
       name: 'File Organizer',
       href: 'https://github.com/wilsonsouto/file-organizer',
       description: 'A script that organizes files based on their extensions',
-      stacks: ['C#'],
+      stacks: ['.NET', 'C#'],
+    },
+    {
+      name: 'Candy Shop',
+      href: 'https://github.com/wilsonsouto/candy-shop',
+      description: 'Console app for candy inventory management',
+      stacks: ['.NET', 'C#'],
     },
   ];
 }
