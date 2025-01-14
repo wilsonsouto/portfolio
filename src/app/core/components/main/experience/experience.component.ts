@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { DateSpanComponent } from '@app/shared/components/date-span/date-span.component';
+import { NavigationLinkComponent } from '@app/shared/components/navigation-link/navigation-link.component';
 import { SectionHeadingComponent } from '@app/shared/components/section-heading/section-heading.component';
 
 interface Experience {
   company: {
     name: string;
-    href: string;
+    url: string;
   };
   startDate: string;
   endDate: string;
@@ -18,7 +19,12 @@ interface Experience {
 @Component({
   selector: 'app-experience',
   standalone: true,
-  imports: [CommonModule, SectionHeadingComponent, DateSpanComponent],
+  imports: [
+    CommonModule,
+    SectionHeadingComponent,
+    DateSpanComponent,
+    NavigationLinkComponent,
+  ],
   templateUrl: './experience.component.html',
 })
 export class ExperienceComponent {
@@ -26,7 +32,7 @@ export class ExperienceComponent {
     {
       company: {
         name: 'Intervalor',
-        href: 'https://intervalor.com.br/',
+        url: 'https://intervalor.com.br/',
       },
       startDate: '2023',
       endDate: 'Present',
@@ -69,7 +75,7 @@ export class ExperienceComponent {
     {
       company: {
         name: 'IBM',
-        href: 'https://www.ibm.com/br-pt',
+        url: 'https://www.ibm.com/br-pt',
       },
       startDate: '2021',
       endDate: '2022',

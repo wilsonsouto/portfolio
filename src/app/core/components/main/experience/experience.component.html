@@ -29,15 +29,12 @@
       </div>
       <div class="item-center flex w-full justify-between">
         <!-- #region company-->
-        <h3>
-          <a
+        <h3 class="font-mono text-xs">
+          <app-navigation-link
             [attr.aria-label]="'Company name: ' + experience.company.name"
-            target="_blank"
-            class="text-sm font-normal italic leading-none hover:underline print:text-[12px]"
-            href="{{ experience.company.href }}"
-          >
-            {{ experience.company.name }}
-          </a>
+            [href]="experience.company.url"
+            [value]="experience.company.name"
+          />
         </h3>
         <!-- #endregion -->
       </div>
@@ -55,7 +52,6 @@
     </li>
   </ul>
   <!-- #endregion -->
-
   <!-- #region tech stacks -->
   <ul
     [attr.aria-label]="'Tech stacks'"
