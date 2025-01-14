@@ -13,27 +13,24 @@
   </p>
   <!-- #endregion -->
   <!-- #region location-->
-  <p class="flex max-w-md gap-2 text-pretty text-xs sm:justify-start">
-    <a
-      [attr.aria-label]="'Location: ' + item.name"
+  <p class="text-pretty font-mono text-xs">
+    <app-navigation-link
       *ngFor="let item of location"
-      class="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
-      target="_blank"
-      href="{{ item.href }}"
-    >
-      {{ item.name }}</a
-    >
+      [attr.aria-label]="'Location: ' + item.name"
+      [value]="item.name"
+      [href]="item.url"
+    />
   </p>
   <!-- #endregion -->
   <!-- #region contact links -->
   <nav aria-label="Contact links">
     <ul
-      class="flex gap-x-1 pt-1 text-sm text-foreground/80 sm:justify-start print:hidden"
+      class="flex gap-x-1 text-sm text-foreground/80 sm:justify-start print:hidden"
     >
       <li *ngFor="let contact of contactLinks">
         <a
           [attr.aria-label]="contact.name"
-          href="{{ contact.href }}"
+          [href]="contact.url"
           target="_blank"
           class="focus-visible:ring-ring border-input inline-flex size-8 items-center justify-center whitespace-nowrap rounded-md border bg-background text-base font-medium ring-offset-background transition-colors hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
         >
