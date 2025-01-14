@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { DateSpanComponent } from '@app/shared/components/date-span/date-span.component';
-import { SectionTitleComponent } from '@app/shared/components/section-title/section-title.component';
+import { SectionHeadingComponent } from '@app/shared/components/section-heading/section-heading.component';
 
 interface Education {
   institution: {
@@ -16,7 +16,7 @@ interface Education {
 @Component({
   selector: 'app-education',
   standalone: true,
-  imports: [CommonModule, SectionTitleComponent, DateSpanComponent],
+  imports: [CommonModule, SectionHeadingComponent, DateSpanComponent],
   templateUrl: './education.component.html',
 })
 export class EducationComponent {

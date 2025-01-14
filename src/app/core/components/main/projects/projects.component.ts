@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { SectionTitleComponent } from '@app/shared/components/section-title/section-title.component';
+import { SectionHeadingComponent } from '@app/shared/components/section-heading/section-heading.component';
 
 interface Project {
   name: string;
@@ -12,7 +12,7 @@ interface Project {
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, SectionTitleComponent],
+  imports: [CommonModule, SectionHeadingComponent],
   templateUrl: './projects.component.html',
 })
 export class ProjectsComponent {
