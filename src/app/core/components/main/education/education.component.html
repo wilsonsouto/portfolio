@@ -28,15 +28,12 @@
     <!-- #endregion -->
   </header>
   <!-- #region institution-->
-  <h3>
-    <a
+  <h3 class="text-pretty font-mono text-xs">
+    <app-navigation-link
       [attr.aria-label]="'Institution name: ' + education.institution.name"
-      target="_blank"
-      class="text-sm font-normal italic leading-none hover:underline print:text-[12px]"
-      href="{{ education.institution.href }}"
-    >
-      {{ education.institution.name }}
-    </a>
+      [href]="education.institution.url"
+      [value]="education.institution.name"
+    />
   </h3>
   <!-- #endregion -->
 </article>
