@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { DateSpanComponent } from '@app/shared/components/date-span/date-span.component';
-import { SectionTitleComponent } from '@app/shared/components/section-title/section-title.component';
+import { SectionHeadingComponent } from '@app/shared/components/section-heading/section-heading.component';
 
 interface Experience {
   company: {
@@ -18,7 +18,7 @@ interface Experience {
 @Component({
   selector: 'app-experience',
   standalone: true,
-  imports: [CommonModule, SectionTitleComponent, DateSpanComponent],
+  imports: [CommonModule, SectionHeadingComponent, DateSpanComponent],
   templateUrl: './experience.component.html',
 })
 export class ExperienceComponent {
@@ -63,7 +63,7 @@ export class ExperienceComponent {
         'Postman',
         'Test-Driven Development (TDD)',
         'Grafana',
-        'Consul'
+        'Consul',
       ],
     },
     {
@@ -100,7 +100,7 @@ export class ExperienceComponent {
         'Git',
         'Postman',
         'User Interface (UI)',
-        'User Experience (UX)'
+        'User Experience (UX)',
       ],
     },
   ];

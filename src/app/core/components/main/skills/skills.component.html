@@ -1,4 +1,7 @@
-<app-section-title [attr.aria-label]="'Skills section'" [heading]="'Skills'" />
+<app-section-heading
+  [attr.aria-label]="'Skills section'"
+  [heading]="'Skills'"
+/>
 <nav>
   <ul class="space-y-2 text-pretty text-sm print:text-[12px]">
     <li *ngFor="let skill of skills; let i = index">

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { SectionTitleComponent } from '@app/shared/components/section-title/section-title.component';
+import { SectionHeadingComponent } from '@app/shared/components/section-heading/section-heading.component';
 
 interface Props {
   topic: string;
@@ -11,7 +11,7 @@ interface Props {
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [SectionTitleComponent, CommonModule],
+  imports: [SectionHeadingComponent, CommonModule],
   templateUrl: './skills.component.html',
 })
 export class SkillsComponent {

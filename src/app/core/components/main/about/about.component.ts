@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { ExperienceComponent } from '@app/core/components/main/experience/experience.component';
-import { SectionTitleComponent } from '@app/shared/components/section-title/section-title.component';
+import { SectionHeadingComponent } from '@app/shared/components/section-heading/section-heading.component';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [SectionTitleComponent],
+  imports: [SectionHeadingComponent],
   templateUrl: './about.component.html',
 })
 export class AboutComponent extends ExperienceComponent {
