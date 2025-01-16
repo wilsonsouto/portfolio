@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { NavigationLinkComponent } from '@app/shared/components/navigation-link/navigation-link.component';
-import * as data from '@app/shared/data/resume-data.json';
+import * as data from '@public/resume-data.json';
 
 interface Contact {
   label: string;
