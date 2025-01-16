@@ -5,8 +5,9 @@ import * as data from '@public/resume-data.json';
 
 interface Contact {
   label: string;
-  url: string;
+  url?: string;
   icon: string;
+  type: string;
 }
 
 interface Props {
@@ -37,4 +38,8 @@ export class HeaderComponent {
       contact: data.contact,
     },
   ];
+
+  printWindow() {
+    window.print();
+  }
 }
