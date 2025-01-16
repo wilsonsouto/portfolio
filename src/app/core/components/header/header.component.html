@@ -1,24 +1,23 @@
-<section class="flex-1 space-y-1.5">
+<section *ngFor="let data of headerData" class="flex-1 space-y-1.5">
   <!-- #region title-->
-  <h1 [attr.aria-label]="'Title: ' + title" class="text-2xl font-bold">
-    {{ title }}
+  <h1 [attr.aria-label]="'Title: ' + data.name" class="text-2xl font-bold">
+    {{ data.name }}
   </h1>
   <!-- #endregion -->
   <!-- #region description-->
   <p
-    [attr.aria-label]="'Description: ' + description"
+    [attr.aria-label]="'Description: ' + data.description"
     class="max-w-md text-pretty font-mono text-sm text-foreground/80 print:text-[12px]"
   >
-    {{ description }}
+    {{ data.description }}
   </p>
   <!-- #endregion -->
   <!-- #region location-->
   <p class="text-pretty font-mono text-xs">
     <app-navigation-link
-      *ngFor="let item of location"
-      [attr.aria-label]="'Location: ' + item.name"
-      [value]="item.name"
-      [href]="item.url"
+      [attr.aria-label]="'Location: ' + data.location.place"
+      [value]="data.location.place"
+      [href]="data.location.url"
     />
   </p>
   <!-- #endregion -->
@@ -27,14 +26,14 @@
     <ul
       class="flex gap-x-1 text-sm text-foreground/80 sm:justify-start print:hidden"
     >
-      <li *ngFor="let contact of contactLinks">
+      <li *ngFor="let item of data.contact">
         <a
-          [attr.aria-label]="contact.name"
-          [href]="contact.url"
+          [attr.aria-label]="item.label"
+          [href]="item.url"
           target="_blank"
           class="focus-visible:ring-ring border-input inline-flex size-8 items-center justify-center whitespace-nowrap rounded-md border bg-background text-base font-medium ring-offset-background transition-colors hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
         >
-          <i class="{{ contact.icon }}"></i>
+          <i class="{{ item.icon }}"></i>
         </a>
       </li>
     </ul>

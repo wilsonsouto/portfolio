@@ -1,0 +1,25 @@
+{
+    "name": "Wilson Souto",
+    "description": "Software Developer passionate about creating value by solving problems and building solutions",
+    "location": {
+        "place": "São Paulo, SP, Brazil",
+        "url": "https://www.google.com/maps/place/S%C3%A3o+Paulo"
+    },
+    "contact": [
+        {
+            "label": "Email",
+            "url": "mailto:wilsonsouto@outlook.com.br",
+            "icon": "fa-regular fa-envelope"
+        },
+        {
+            "label": "Github",
+            "url": "https://github.com/wilsonsouto",
+            "icon": "fa-brands fa-github"
+        },
+        {
+            "label": "Linkedin",
+            "url": "https://linkedin.com/in/wilsonsouto",
+            "icon": "fa-brands fa-linkedin"
+        }
+    ]
+}
