@@ -18,6 +18,7 @@ interface Props {
     url: string;
   };
   contact: Contact[];
+  image: string,
 }
 
 @Component({
@@ -36,10 +37,11 @@ export class HeaderComponent {
         url: data.location.url,
       },
       contact: data.contact,
+      image: data.image,
     },
   ];
 
-  printWindow() {
+  printResume() {
     window.print();
   }
 }
