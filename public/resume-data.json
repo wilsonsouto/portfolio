@@ -35,5 +35,6 @@
       "icon": "fa-solid fa-file-pdf",
       "type": "button"
     }
-  ]
+  ],
+  "image": "profile-picture.jpeg"
 }

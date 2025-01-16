@@ -27,7 +27,7 @@
       <li *ngFor="let item of data.contact">
         <ng-container [ngSwitch]="item.type">
           <button
-            (click)="printWindow()"
+            (click)="printResume()"
             *ngSwitchCase="'button'"
             [attr.aria-label]="item.label"
             class="focus-visible:ring-ring border-input inline-flex size-8 items-center justify-center whitespace-nowrap rounded-md border bg-background text-base font-medium ring-offset-background transition-colors hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
@@ -50,14 +50,15 @@
   </nav>
   <!-- #endregion -->
 </section>
+<!-- #region profile picture-->
 <div
+  *ngFor="let data of headerData"
   class="relative flex size-28 h-full shrink-0 justify-self-end overflow-hidden rounded-xl"
 >
-  <!-- #region profile picture-->
   <img
     class="aspect-square h-full w-full object-cover"
-    src="./profile-picture.jpeg"
-    alt="Wilson Souto's profile picture"
+    src="{{ data.image }}"
+    alt="Profile picture"
   />
   <!-- #endregion -->
 </div>
