@@ -23,18 +23,28 @@
   <!-- #endregion -->
   <!-- #region contact links -->
   <nav aria-label="Contact links">
-    <ul
-      class="flex gap-x-1 text-sm text-foreground/80 sm:justify-start print:hidden"
-    >
+    <ul class="flex gap-x-1 text-foreground/80 sm:justify-start print:hidden">
       <li *ngFor="let item of data.contact">
-        <a
-          [attr.aria-label]="item.label"
-          [href]="item.url"
-          target="_blank"
-          class="focus-visible:ring-ring border-input inline-flex size-8 items-center justify-center whitespace-nowrap rounded-md border bg-background text-base font-medium ring-offset-background transition-colors hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
-        >
-          <i class="{{ item.icon }}"></i>
-        </a>
+        <ng-container [ngSwitch]="item.type">
+          <button
+            (click)="printWindow()"
+            *ngSwitchCase="'button'"
+            [attr.aria-label]="item.label"
+            class="focus-visible:ring-ring border-input inline-flex size-8 items-center justify-center whitespace-nowrap rounded-md border bg-background text-base font-medium ring-offset-background transition-colors hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+          >
+            <i class="{{ item.icon }}"></i>
+          </button>
+          <li *ngSwitchCase="'list'">
+            <a
+              [attr.aria-label]="item.label"
+              [href]="item.url"
+              target="_blank"
+              class="focus-visible:ring-ring border-input inline-flex size-8 items-center justify-center whitespace-nowrap rounded-md border bg-background text-base font-medium ring-offset-background transition-colors hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+            >
+              <i class="{{ item.icon }}"></i>
+            </a>
+          </li>
+        </ng-container>
       </li>
     </ul>
   </nav>
