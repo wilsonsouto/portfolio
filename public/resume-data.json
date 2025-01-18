@@ -1,7 +1,7 @@
 {
   "header": {
     "name": "Wilson Souto",
-    "description": "Software Developer passionate about creating value by solving problems and building solutions",
+    "description": "Software Developer focused on creating value by solving problems and building solutions",
     "location": {
       "place": "São Paulo, SP, Brazil",
       "url": "https://www.google.com/maps/place/S%C3%A3o+Paulo"
@@ -39,7 +39,7 @@
     ],
     "image": "profile-picture.jpeg"
   },
-  "about": "Dedicated and results-oriented Software Developer with expertise in systems analysis and development. Passionate about creating value by solving problems and building solutions. Proven track record at Intervalor in delivering high-quality, efficient software that drives business success",
+  "about": "Dedicated and results-oriented Software Developer with expertise in systems analysis and development. Focused on creating value by solving problems and building solutions. Proven track record at Intervalor in delivering high-quality, efficient software that drives business success.",
   "experience": [
     {
       "company": {
