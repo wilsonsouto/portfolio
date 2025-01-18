@@ -20,7 +20,13 @@
             [attr.aria-label]="'Project name: ' + data.name"
             class="text-base font-semibold tracking-tight"
           >
-            <app-navigation-link [href]="data.url" [value]="data.name" />
+            <app-navigation-link
+              [props]="{
+                text: data.name,
+                ariaLabel: data.name,
+                url: data.url,
+              }"
+            />
           </h1>
           <!-- #endregion -->
           <!-- #region description-->

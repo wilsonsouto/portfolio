@@ -6,6 +6,7 @@ interface Props {
   ariaLabel: string;
   type: 'paragraph' | 'list';
   width: 'max-w-md' | 'w-full';
+  size: 'text-xs' | 'text-sm' | 'text-base';
 }
 
 @Component({
@@ -20,9 +21,10 @@ export class TextElementComponent {
     ariaLabel: '',
     type: 'paragraph',
     width: 'w-full',
+    size: 'text-base',
   };
 
   addClasses() {
-    return `text-pretty text-base text-foreground/80 print:text-foreground ${this.props.width}`;
+    return `text-pretty text-base text-foreground/80 print:text-foreground ${this.props.width} ${this.props.size}`;
   }
 }

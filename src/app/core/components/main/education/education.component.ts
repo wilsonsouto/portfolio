@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { DateSpanComponent } from '@app/shared/components/date-span/date-span.component';
 import { NavigationLinkComponent } from '@app/shared/components/navigation-link/navigation-link.component';
 import { SectionHeadingComponent } from '@app/shared/components/section-heading/section-heading.component';
+import { TextElementComponent } from '@app/shared/components/text-element/text-element.component';
 import * as data from '@public/resume-data.json';
 
 interface Props {
@@ -21,8 +21,8 @@ interface Props {
   imports: [
     CommonModule,
     SectionHeadingComponent,
-    DateSpanComponent,
     NavigationLinkComponent,
+    TextElementComponent,
   ],
   templateUrl: './education.component.html',
 })

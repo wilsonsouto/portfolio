@@ -1,9 +1,10 @@
 <a
-  [href]="href"
+  [attr.aria-label]="props.ariaLabel"
+  [href]="props.url"
   target="_blank"
   class="group leading-none hover:underline print:underline"
 >
-  {{ value }}
+  {{ props.text }}
   <i
     class="fa-solid fa-arrow-up inline-block h-4 w-4 shrink-0 translate-y-px rotate-45 text-xs transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-focus-visible:-translate-y-0.5 group-focus-visible:translate-x-0.5 motion-reduce:transition-none print:hidden"
   ></i>
