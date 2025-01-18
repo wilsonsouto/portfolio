@@ -1,16 +1,18 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { ExperienceComponent } from '@app/core/components/main/experience/experience.component';
 import { SectionHeadingComponent } from '@app/shared/components/section-heading/section-heading.component';
+import * as data from '@public/resume-data.json';
+
+interface Props {
+  about: string;
+}
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [SectionHeadingComponent],
+  imports: [SectionHeadingComponent, CommonModule],
   templateUrl: './about.component.html',
 })
-export class AboutComponent extends ExperienceComponent {
-  public introduction: string[] = [
-    'Dedicated and results-oriented Software Developer with expertise in systems analysis and development. Passionate about creating value by solving problems and building solutions. Proven track record at',
-    'in delivering high-quality, efficient software that drives business success.',
-  ];
+export class AboutComponent {
+  aboutData: Props[] = [{ about: data.about }];
 }
