@@ -8,33 +8,51 @@
     },
     "contact": [
       {
+        "label": "Portfolio",
+        "url": "https://wilsonsouto.github.io/portfolio/",
+        "icon": "fa-solid fa-briefcase",
+        "type": "list",
+        "hidden": true,
+        "printable": true
+      },
+      {
         "label": "Email",
         "url": "mailto:wilsonsouto@outlook.com.br",
         "icon": "fa-solid fa-envelope",
-        "type": "list"
+        "type": "list",
+        "hidden": false,
+        "printable": false
       },
       {
         "label": "Phone",
         "url": "tel:+5511941862376",
         "icon": "fa-solid fa-phone",
-        "type": "list"
+        "type": "list",
+        "hidden": false,
+        "printable": false
       },
       {
         "label": "Github",
         "url": "https://github.com/wilsonsouto",
         "icon": "fa-brands fa-github",
-        "type": "list"
+        "type": "list",
+        "hidden": false,
+        "printable": true
       },
       {
         "label": "Linkedin",
         "url": "https://linkedin.com/in/wilsonsouto",
         "icon": "fa-brands fa-linkedin-in",
-        "type": "list"
+        "type": "list",
+        "hidden": false,
+        "printable": true
       },
       {
         "label": "Resume",
         "icon": "fa-solid fa-file-pdf",
-        "type": "button"
+        "type": "button",
+        "hidden": false,
+        "printable": false
       }
     ],
     "image": "profile-picture.jpeg"

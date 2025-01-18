@@ -7,6 +7,6 @@ import { Component, Input } from '@angular/core';
   templateUrl: './navigation-link.component.html',
 })
 export class NavigationLinkComponent {
-  @Input() href: string = '';
-  @Input() value: string = '';
+  @Input() href: string | undefined = '';
+  @Input() value: string | undefined = '';
 }
