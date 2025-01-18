@@ -1,4 +1,4 @@
-<section *ngFor="let data of headerData" class="flex-1 space-y-1.5">
+<section *ngFor="let data of header" class="flex-1 space-y-1.5">
   <!-- #region title-->
   <h1 [attr.aria-label]="'Title: ' + data.name" class="text-2xl font-bold">
     {{ data.name }}
@@ -52,7 +52,7 @@
 </section>
 <!-- #region profile picture-->
 <div
-  *ngFor="let data of headerData"
+  *ngFor="let data of header"
   class="relative flex size-28 h-full shrink-0 justify-self-end overflow-hidden rounded-xl"
 >
   <img

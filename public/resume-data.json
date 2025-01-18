@@ -1,42 +1,44 @@
 {
-  "name": "Wilson Souto",
-  "description": "Software Developer passionate about creating value by solving problems and building solutions",
-  "location": {
-    "place": "São Paulo, SP, Brazil",
-    "url": "https://www.google.com/maps/place/S%C3%A3o+Paulo"
+  "header": {
+    "name": "Wilson Souto",
+    "description": "Software Developer passionate about creating value by solving problems and building solutions",
+    "location": {
+      "place": "São Paulo, SP, Brazil",
+      "url": "https://www.google.com/maps/place/S%C3%A3o+Paulo"
+    },
+    "contact": [
+      {
+        "label": "Email",
+        "url": "mailto:wilsonsouto@outlook.com.br",
+        "icon": "fa-solid fa-envelope",
+        "type": "list"
+      },
+      {
+        "label": "Phone",
+        "url": "tel:+5511941862376",
+        "icon": "fa-solid fa-phone",
+        "type": "list"
+      },
+      {
+        "label": "Github",
+        "url": "https://github.com/wilsonsouto",
+        "icon": "fa-brands fa-github",
+        "type": "list"
+      },
+      {
+        "label": "Linkedin",
+        "url": "https://linkedin.com/in/wilsonsouto",
+        "icon": "fa-brands fa-linkedin-in",
+        "type": "list"
+      },
+      {
+        "label": "Resume",
+        "icon": "fa-solid fa-file-pdf",
+        "type": "button"
+      }
+    ],
+    "image": "profile-picture.jpeg"
   },
-  "contact": [
-    {
-      "label": "Email",
-      "url": "mailto:wilsonsouto@outlook.com.br",
-      "icon": "fa-solid fa-envelope",
-      "type": "list"
-    },
-    {
-      "label": "Phone",
-      "url": "tel:+5511941862376",
-      "icon": "fa-solid fa-phone",
-      "type": "list"
-    },
-    {
-      "label": "Github",
-      "url": "https://github.com/wilsonsouto",
-      "icon": "fa-brands fa-github",
-      "type": "list"
-    },
-    {
-      "label": "Linkedin",
-      "url": "https://linkedin.com/in/wilsonsouto",
-      "icon": "fa-brands fa-linkedin-in",
-      "type": "list"
-    },
-    {
-      "label": "Resume",
-      "icon": "fa-solid fa-file-pdf",
-      "type": "button"
-    }
-  ],
-  "image": "profile-picture.jpeg",
   "about": "Dedicated and results-oriented Software Developer with expertise in systems analysis and development. Passionate about creating value by solving problems and building solutions. Proven track record at Intervalor in delivering high-quality, efficient software that drives business success",
   "experience": [
     {
@@ -47,7 +49,7 @@
       "startDate": "2023",
       "endDate": "Present",
       "role": "Software Developer",
-      "responsibilities": [
+      "responsabilities": [
         "Developed AI-powered chatbots that integrate with services utilizing the OpenAI API, boosting user engagement and automating interactions.",
         "Developed and maintained scalable and high-performance RESTful APIs, improving system efficiency and reliability.",
         "Contributed to the operation and continuous optimization of microservices, ensuring seamless data flow and high efficiency in large-scale systems.",
@@ -90,7 +92,7 @@
       "startDate": "2021",
       "endDate": "2022",
       "role": "Developer Intern",
-      "responsibilities": [
+      "responsabilities": [
         "Developed innovative solutions using IBM Watson Assistant, IBM Cloud, and IBM Storage, enhancing system efficiency.",
         "Created clean, maintainable, and scalable software components in C# by applying object-oriented programming principles.",
         "Enhanced data management and CRUD operations by integrating SQL Server and Entity Framework into ASP.NET Core.",

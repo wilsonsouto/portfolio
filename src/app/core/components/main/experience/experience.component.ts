@@ -29,7 +29,7 @@ interface Props {
   templateUrl: './experience.component.html',
 })
 export class ExperienceComponent {
-  aboutData: Props[] = data.experience.map((experience) => ({
+  experience: Props[] = data.experience.map((experience) => ({
     company: {
       name: experience.company.name,
       url: experience.company.url,
@@ -37,7 +37,7 @@ export class ExperienceComponent {
     startDate: experience.startDate,
     endDate: experience.endDate,
     role: experience.role,
-    responsabilities: experience.responsibilities,
+    responsabilities: experience.responsabilities,
     stacks: experience.stacks,
   }));
 }
