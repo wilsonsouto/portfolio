@@ -3,8 +3,9 @@ import { Component } from '@angular/core';
 import { DateSpanComponent } from '@app/shared/components/date-span/date-span.component';
 import { NavigationLinkComponent } from '@app/shared/components/navigation-link/navigation-link.component';
 import { SectionHeadingComponent } from '@app/shared/components/section-heading/section-heading.component';
+import * as data from '@public/resume-data.json';
 
-interface Education {
+interface Props {
   institution: {
     name: string;
     url: string;
@@ -26,15 +27,15 @@ interface Education {
   templateUrl: './education.component.html',
 })
 export class EducationComponent {
-  public educations: Education[] = [
+  education: Props[] = [
     {
       institution: {
-        name: 'FIAP',
-        url: 'https://www.fiap.com.br/',
+        name: data.education.institution.name,
+        url: data.education.institution.url,
       },
-      startDate: '2021',
-      endDate: '2022',
-      degree: " Associate's Degree in Systems Analysis and Development",
+      startDate: data.education.startDate,
+      endDate: data.education.endDate,
+      degree: data.education.degree,
     },
   ];
 }

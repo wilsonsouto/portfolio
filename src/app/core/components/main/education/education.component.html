@@ -3,36 +3,34 @@
   [heading]="'Education'"
 />
 <article
-  *ngFor="let education of educations"
+  *ngFor="let data of education"
   class="flex w-full flex-col gap-2 leading-none sm:gap-1 print:text-sm"
 >
   <header class="grid grid-cols-[1fr_auto] place-items-baseline">
     <!-- #region degree -->
     <div class="inline-flex gap-x-1 font-medium leading-none print:text-sm">
       <h2
-        [attr.aria-label]="'Degree: ' + education.degree"
+        [attr.aria-label]="'Degree: ' + data.degree"
         class="font-bold leading-none print:text-[12px]"
       >
-        {{ education.degree }}
+        {{ data.degree }}
       </h2>
     </div>
     <!-- #endregion -->
 
     <!-- #region date-->
     <app-date-span
-      [attr.aria-label]="
-        'Date: ' + education.startDate + ' – ' + education.endDate
-      "
-      [date]="education.startDate + ' – ' + education.endDate"
+      [attr.aria-label]="'Date: ' + data.startDate + ' – ' + data.endDate"
+      [date]="data.startDate + ' – ' + data.endDate"
     />
     <!-- #endregion -->
   </header>
   <!-- #region institution-->
   <h3 class="text-pretty font-mono text-xs">
     <app-navigation-link
-      [attr.aria-label]="'Institution name: ' + education.institution.name"
-      [href]="education.institution.url"
-      [value]="education.institution.name"
+      [attr.aria-label]="'Institution name: ' + data.institution.name"
+      [href]="data.institution.url"
+      [value]="data.institution.name"
     />
   </h3>
   <!-- #endregion -->
