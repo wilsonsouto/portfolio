@@ -1,6 +1,10 @@
 <app-section-heading
-  [attr.aria-label]="'Work Experience'"
-  [heading]="{ text: 'Work Experience', border: true, size: 'text-xl' }"
+  [props]="{
+    text: 'Work Experience',
+    ariaLabel: 'Work Experience section',
+    border: true,
+    size: 'text-xl',
+  }"
 />
 <article *ngFor="let data of experience" class="rounded-lg py-1 print:py-0">
   <header class="mb-4 flex items-center justify-between">

@@ -1,9 +1,18 @@
 <ng-container *ngFor="let data of about">
   <app-section-heading
-    [attr.aria-label]="'About section'"
-    [heading]="{ text: 'About', size: 'text-xl', border: true }"
+    [props]="{
+      text: 'About',
+      ariaLabel: 'About section',
+      size: 'text-xl',
+      border: true,
+    }"
   />
-  <p class="text-pretty text-sm text-foreground/80 print:text-[12px]">
-    {{ data.about }}
-  </p>
+  <app-text-element
+    [props]="{
+      text: data.about,
+      ariaLabel: data.about,
+      type: 'paragraph',
+      width: 'w-full',
+    }"
+  />
 </ng-container>

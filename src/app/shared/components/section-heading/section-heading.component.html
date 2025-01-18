@@ -1,1 +1,3 @@
-<h1 [className]="addClasses()">{{ heading.text }}</h1>
+<h1 [attr.aria-label]="props.ariaLabel" [className]="addClasses()">
+  {{ props.text }}
+</h1>

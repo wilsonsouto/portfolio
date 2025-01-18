@@ -4,20 +4,28 @@
   class="grid items-end space-y-1.5 print:grid-cols-2 print:space-y-0"
 >
   <app-section-heading
-    [attr.aria-label]="'Title: ' + data.name"
-    [heading]="{ text: data.name, border: false, size: 'text-2xl' }"
+    [props]="{
+      text: data.name,
+      ariaLabel: 'Name:' + data.name,
+      border: false,
+      size: 'text-2xl',
+    }"
   />
-  <p
-    [attr.aria-label]="'Description: ' + data.description"
-    class="max-w-md text-base text-foreground/80 print:hidden"
-  >
-    {{ data.description }}
-  </p>
+  <app-text-element
+    [attr.aria-label]="data.description"
+    [props]="{
+      text: data.description,
+      ariaLabel: 'description:' + data.description,
+      type: 'paragraph',
+      width: 'max-w-md',
+    }"
+    class="print:hidden"
+  />
   <app-navigation-link
-    class="text-sm print:justify-self-end print:text-base"
     [attr.aria-label]="'Location: ' + data.location.place"
     [value]="data.location.place"
     [href]="data.location.url"
+    class="text-sm print:justify-self-end print:text-base"
   />
   <nav aria-label="Contact links">
     <ul class="flex gap-x-1 text-foreground/80 sm:justify-start print:hidden">

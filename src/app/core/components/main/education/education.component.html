@@ -1,6 +1,10 @@
 <app-section-heading
-  [attr.aria-label]="'Education section'"
-  [heading]="{ text: 'Education', border: true, size: 'text-xl' }"
+  [props]="{
+    text: 'Education',
+    ariaLabel: 'Education section',
+    border: true,
+    size: 'text-xl',
+  }"
 />
 <article
   *ngFor="let data of education"
