@@ -14,5 +14,5 @@ interface Props {
   templateUrl: './about.component.html',
 })
 export class AboutComponent {
-  aboutData: Props[] = [{ about: data.about }];
+  about: Props[] = [{ about: data.about }];
 }

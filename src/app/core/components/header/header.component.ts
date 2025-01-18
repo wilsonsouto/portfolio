@@ -18,7 +18,7 @@ interface Props {
     url: string;
   };
   contact: Contact[];
-  image: string,
+  image: string;
 }
 
 @Component({
@@ -28,16 +28,16 @@ interface Props {
   templateUrl: './header.component.html',
 })
 export class HeaderComponent {
-  public headerData: Props[] = [
+  public header: Props[] = [
     {
-      name: data.name,
-      description: data.description,
+      name: data.header.name,
+      description: data.header.description,
       location: {
-        place: data.location.place,
-        url: data.location.url,
+        place: data.header.location.place,
+        url: data.header.location.url,
       },
-      contact: data.contact,
-      image: data.image,
+      contact: data.header.contact,
+      image: data.header.image,
     },
   ];
 
