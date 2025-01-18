@@ -6,9 +6,11 @@ import * as data from '@public/resume-data.json';
 
 interface Contact {
   label: string;
-  url?: string;
-  icon: string;
   type: string;
+  icon?: string;
+  url?: string;
+  hidden: boolean;
+  printable: boolean;
 }
 
 interface Props {
@@ -55,29 +57,46 @@ export class HeaderComponent {
     return undefined;
   }
 
-  getEmail(): string | undefined {
+  getEmail(): {
+    fullUrl: string | undefined;
+    urlWithoutPrefix: string | undefined;
+  } {
     const findMailto = this.header
       .map((x) => x.contact)
       .flat()
       .find((contact) => contact.url?.includes('mailto:'));
 
     if (findMailto) {
-      return findMailto.url?.replace('mailto:', '');
+      const fullUrl = findMailto.url;
+      const urlWithoutPrefix = findMailto.url?.replace('mailto:', '');
+      return { fullUrl, urlWithoutPrefix };
     }
 
-    return undefined;
+    return { fullUrl: undefined, urlWithoutPrefix: undefined };
   }
 
-  getTelephone(): string | undefined {
-    const findTel = this.header
+  getTelephone(): {
+    fullUrl: string | undefined;
+    urlWithoutPrefix: string | undefined;
+  } {
+    const findTelepehone = this.header
       .map((x) => x.contact)
       .flat()
       .find((contact) => contact.url?.includes('tel:'));
 
-    if (findTel) {
-      return findTel.url?.replace('tel:', '');
+    if (findTelepehone) {
+      const fullUrl = findTelepehone.url;
+      const urlWithoutPrefix = findTelepehone.url?.replace('tel:', '');
+      return { fullUrl, urlWithoutPrefix };
     }
 
-    return undefined;
+    return { fullUrl: undefined, urlWithoutPrefix: undefined };
+  }
+
+  getPrintableContacts(): any[] {
+    return this.header
+      .map((x) => x.contact)
+      .flat()
+      .filter((contact) => contact.printable);
   }
 }

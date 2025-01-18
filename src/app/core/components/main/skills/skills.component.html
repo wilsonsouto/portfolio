@@ -8,7 +8,7 @@
       <button
         [ngClass]="skill.isVisible ? 'bg-neutral-600' : 'bg-neutral-700'"
         (click)="toggleVisibility(i)"
-        class="flex w-full items-center justify-between gap-x-2 text-pretty rounded-md px-4 py-2 text-left font-mono text-background hover:bg-neutral-600"
+        class="flex w-full items-center justify-between gap-x-2 text-pretty rounded-md px-4 py-2 text-left text-background hover:bg-neutral-600"
       >
         <span [attr.aria-label]="skill.topic">{{ skill.topic }}</span>
         <i

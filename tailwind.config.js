@@ -34,6 +34,9 @@ module.exports = {
           900: "#204771",
         },
       },
+      fontFamily: {
+        charis: ["Charis SIL", "serif"]
+      }
     },
   },
   plugins: [],

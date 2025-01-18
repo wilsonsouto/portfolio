@@ -1,72 +1,96 @@
-<section *ngFor="let data of header" class="flex-1 space-y-1.5">
-  <!-- #region title-->
+<!-- #region left content-->
+<section
+  *ngFor="let data of header"
+  class="grid items-end space-y-1.5 print:grid-cols-2 print:space-y-0"
+>
   <app-section-heading
     [attr.aria-label]="'Title: ' + data.name"
     [heading]="{ text: data.name, border: false, size: 'text-2xl' }"
   />
-  <!-- #endregion -->
-  <!-- #region description-->
   <p
     [attr.aria-label]="'Description: ' + data.description"
-    class="max-w-md text-pretty font-mono text-sm text-foreground/80 print:text-[12px]"
+    class="max-w-md text-base text-foreground/80 print:hidden"
   >
     {{ data.description }}
   </p>
-  <!-- #endregion -->
-  <!-- #region location-->
-  <p class="text-pretty font-mono text-xs">
-    <app-navigation-link
-      [attr.aria-label]="'Location: ' + data.location.place"
-      [value]="data.location.place"
-      [href]="data.location.url"
-    />
-  </p>
-  <!-- #endregion -->
-  <!-- #region contact links -->
+  <app-navigation-link
+    class="text-sm print:justify-self-end print:text-base"
+    [attr.aria-label]="'Location: ' + data.location.place"
+    [value]="data.location.place"
+    [href]="data.location.url"
+  />
   <nav aria-label="Contact links">
     <ul class="flex gap-x-1 text-foreground/80 sm:justify-start print:hidden">
-      <li *ngFor="let item of data.contact">
-        <ng-container [ngSwitch]="item.type">
-          <button
-            (click)="printWindow(item)"
-            *ngSwitchCase="'button'"
-            [attr.aria-label]="item.label"
-            class="focus-visible:ring-ring border-input inline-flex size-8 items-center justify-center whitespace-nowrap rounded-md border bg-background text-base font-medium ring-offset-background transition-colors hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
-          >
-            <i class="{{ item.icon }}"></i>
-          </button>
-          <li *ngSwitchCase="'list'">
-            <a
+      <ng-container *ngFor="let item of data.contact">
+        <li *ngIf="!item.hidden">
+          <ng-container [ngSwitch]="item.type">
+            <button
+              *ngSwitchCase="'button'"
               [attr.aria-label]="item.label"
-              [href]="item.url"
-              target="_blank"
+              (click)="printWindow(item)"
               class="focus-visible:ring-ring border-input inline-flex size-8 items-center justify-center whitespace-nowrap rounded-md border bg-background text-base font-medium ring-offset-background transition-colors hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
             >
               <i class="{{ item.icon }}"></i>
-            </a>
-          </li>
-        </ng-container>
-      </li>
+            </button>
+            <li *ngSwitchCase="'list'">
+              <a
+                [attr.aria-label]="item.label"
+                [href]="item.url"
+                target="_blank"
+                class="focus-visible:ring-ring border-input inline-flex size-8 items-center justify-center whitespace-nowrap rounded-md border bg-background text-base font-medium ring-offset-background transition-colors hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+              >
+                <i class="{{ item.icon }}"></i>
+              </a>
+            </li>
+          </ng-container>
+        </li>
+      </ng-container>
     </ul>
   </nav>
-  <!-- #endregion -->
 </section>
-<!-- #region profile picture-->
+<!-- #endregion -->
+<!-- #region right content-->
 <div
   *ngFor="let data of header"
-  class="relative flex size-28 h-full shrink-0 justify-self-end overflow-hidden rounded-xl print:size-full print:rounded-none"
+  class="relative flex size-28 h-full shrink-0 items-start overflow-hidden rounded-xl print:size-full print:rounded-none"
 >
   <img
     class="aspect-square h-full w-full object-cover print:hidden"
     src="{{ data.image }}"
     alt="Profile picture"
   />
-  <div class="hidden place-items-end print:block">
-    <p [attr.aria-label]="'Location: ' + data.location.place">
-      {{ data.location.place }}
-    </p>
-    <p>Email: {{ getEmail() }}</p>
-    <p>Mobile: {{ getTelephone() }}</p>
-  </div>
-  <!-- #endregion -->
+  <ul
+    class="hidden w-full grid-cols-[1fr_auto] place-items-end justify-items-start space-y-1.5 text-pretty text-base print:grid print:space-y-0"
+  >
+    <div class="flex gap-x-1">
+      <ng-container *ngFor="let item of getPrintableContacts(); let i = index">
+        <li class="flex flex-row gap-x-1">
+          <app-navigation-link
+            [attr.aria-label]="item.label"
+            [href]="item.url"
+            [value]="item.label"
+          />
+          <span *ngIf="i < getPrintableContacts().length - 1">|</span>
+        </li>
+      </ng-container>
+    </div>
+    <div class="flex gap-x-1">
+      <li>
+        <app-navigation-link
+          [attr.aria-label]="'Email: ' + getEmail()"
+          [value]="getEmail().urlWithoutPrefix"
+          [href]="getEmail().fullUrl"
+        />
+      </li>
+      |
+      <li>
+        <app-navigation-link
+          [attr.aria-label]="'Telephone: ' + getTelephone()"
+          [value]="getTelephone().urlWithoutPrefix"
+          [href]="getTelephone().fullUrl"
+        />
+      </li>
+    </div>
+  </ul>
 </div>
+<!-- #endregion -->

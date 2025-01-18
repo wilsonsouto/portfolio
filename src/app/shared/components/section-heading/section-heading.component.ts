@@ -21,7 +21,7 @@ export class SectionHeadingComponent {
 
   addClasses() {
     const hasBorder = this.heading.border
-      ? 'print:border-b-[1px] print:border-black print:mb-2'
+      ? 'print:border-b-[1px] print:border-black'
       : '';
     return `font-bold ${this.heading.size} ${hasBorder}`;
   }
