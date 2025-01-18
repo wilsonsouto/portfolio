@@ -28,7 +28,7 @@
       <li *ngFor="let item of data.contact">
         <ng-container [ngSwitch]="item.type">
           <button
-            (click)="printResume()"
+            (click)="printWindow(item)"
             *ngSwitchCase="'button'"
             [attr.aria-label]="item.label"
             class="focus-visible:ring-ring border-input inline-flex size-8 items-center justify-center whitespace-nowrap rounded-md border bg-background text-base font-medium ring-offset-background transition-colors hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
@@ -54,12 +54,19 @@
 <!-- #region profile picture-->
 <div
   *ngFor="let data of header"
-  class="relative flex size-28 h-full shrink-0 justify-self-end overflow-hidden rounded-xl"
+  class="relative flex size-28 h-full shrink-0 justify-self-end overflow-hidden rounded-xl print:size-full print:rounded-none"
 >
   <img
-    class="aspect-square h-full w-full object-cover"
+    class="aspect-square h-full w-full object-cover print:hidden"
     src="{{ data.image }}"
     alt="Profile picture"
   />
+  <div class="hidden place-items-end print:block">
+    <p [attr.aria-label]="'Location: ' + data.location.place">
+      {{ data.location.place }}
+    </p>
+    <p>Email: {{ getEmail() }}</p>
+    <p>Mobile: {{ getTelephone() }}</p>
+  </div>
   <!-- #endregion -->
 </div>
