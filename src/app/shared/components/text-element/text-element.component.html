@@ -1,0 +1,16 @@
+<ng-container [ngSwitch]="props.type">
+  <p
+    [attr.aria-label]="props.ariaLabel"
+    [className]="addClasses()"
+    *ngSwitchCase="'paragraph'"
+  >
+    {{ props.text }}
+  </p>
+  <li
+    [attr.aria-label]="props.ariaLabel"
+    [className]="addClasses()"
+    *ngSwitchCase="'list'"
+  >
+    {{ props.type }}
+  </li>
+</ng-container>
