@@ -121,5 +121,14 @@
         "User Experience (UX)"
       ]
     }
-  ]
+  ],
+  "education": {
+    "institution": {
+      "name": "FIAP",
+      "url": "https://www.fiap.com.br/"
+    },
+    "startDate": "2021",
+    "endDate": "2022",
+    "degree": " Associate's Degree in Systems Analysis and Development"
+  }
 }
