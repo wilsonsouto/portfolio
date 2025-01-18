@@ -2,28 +2,23 @@
   [attr.aria-label]="'Work Experience section'"
   [heading]="'Work Experience'"
 />
-<article
-  *ngFor="let experience of experiences"
-  class="rounded-lg py-1 print:py-0"
->
+<article *ngFor="let data of aboutData" class="rounded-lg py-1 print:py-0">
   <header class="mb-4 flex items-center justify-between">
     <div class="flex w-full flex-col gap-1 leading-none print:text-sm">
       <div class="item-center flex w-full justify-between">
         <!-- #region role -->
         <h2
-          [attr.aria-label]="'Role: ' + experience.role"
+          [attr.aria-label]="'Role: ' + data.role"
           class="font-bold leading-none print:text-[12px]"
         >
-          {{ experience.role }}
+          {{ data.role }}
         </h2>
         <!-- #endregion -->
 
         <!-- #region date-->
         <app-date-span
-          [attr.aria-label]="
-            'Date: ' + experience.startDate + ' – ' + experience.endDate
-          "
-          [date]="experience.startDate + ' – ' + experience.endDate"
+          [attr.aria-label]="'Date: ' + data.startDate + ' – ' + data.endDate"
+          [date]="data.startDate + ' – ' + data.endDate"
         />
         <!-- #endregion -->
       </div>
@@ -31,9 +26,9 @@
         <!-- #region company-->
         <h3 class="font-mono text-xs">
           <app-navigation-link
-            [attr.aria-label]="'Company name: ' + experience.company.name"
-            [href]="experience.company.url"
-            [value]="experience.company.name"
+            [attr.aria-label]="'Company name: ' + data.company.name"
+            [href]="data.company.url"
+            [value]="data.company.name"
           />
         </h3>
         <!-- #endregion -->
@@ -46,7 +41,7 @@
   >
     <li
       [attr.aria-label]="'Responsability: ' + responsability"
-      *ngFor="let responsability of experience.responsabilities"
+      *ngFor="let responsability of data.responsabilities"
     >
       {{ responsability }}
     </li>
@@ -58,7 +53,7 @@
     class="mt-2 flex list-none flex-wrap gap-x-1 gap-y-1 p-0 text-center text-xs font-medium text-foreground"
   >
     <li
-      *ngFor="let stack of experience.stacks"
+      *ngFor="let stack of data.stacks"
       class="flex-grow rounded border border-neutral-100 bg-neutral-200 px-2 py-1"
     >
       {{ stack }}
