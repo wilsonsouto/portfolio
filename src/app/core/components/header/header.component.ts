@@ -29,7 +29,7 @@ interface Props {
   templateUrl: './header.component.html',
 })
 export class HeaderComponent {
-  public header: Props[] = [
+  header: Props[] = [
     {
       name: data.header.name,
       description: data.header.description,
@@ -42,7 +42,42 @@ export class HeaderComponent {
     },
   ];
 
-  printResume() {
-    window.print();
+  printWindow(item: any): string | undefined {
+    const findResume = this.header
+      .map((x) => x.contact)
+      .flat()
+      .find((contact) => contact.label.toLowerCase().includes('resume'));
+
+    if (findResume == item) {
+      window.print();
+    }
+
+    return undefined;
+  }
+
+  getEmail(): string | undefined {
+    const findMailto = this.header
+      .map((x) => x.contact)
+      .flat()
+      .find((contact) => contact.url?.includes('mailto:'));
+
+    if (findMailto) {
+      return findMailto.url?.replace('mailto:', '');
+    }
+
+    return undefined;
+  }
+
+  getTelephone(): string | undefined {
+    const findTel = this.header
+      .map((x) => x.contact)
+      .flat()
+      .find((contact) => contact.url?.includes('tel:'));
+
+    if (findTel) {
+      return findTel.url?.replace('tel:', '');
+    }
+
+    return undefined;
   }
 }
