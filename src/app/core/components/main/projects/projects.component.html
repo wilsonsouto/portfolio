@@ -5,7 +5,7 @@
 <div
   class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2"
 >
-  <article *ngFor="let project of projects">
+  <article *ngFor="let data of projects">
     <div
       class="flex h-full flex-col overflow-hidden rounded-lg border p-3 md:min-h-44"
     >
@@ -13,10 +13,10 @@
         <div class="space-y-1">
           <!-- #region name-->
           <h1
-            [attr.aria-label]="'Project name: ' + project.name"
+            [attr.aria-label]="'Project name: ' + data.name"
             class="text-base font-semibold tracking-tight"
           >
-            <app-navigation-link [href]="project.url" [value]="project.name" />
+            <app-navigation-link [href]="data.url" [value]="data.name" />
           </h1>
           <!-- #endregion -->
           <!-- #region description-->
@@ -24,7 +24,7 @@
             [attr.aria-label]="'Project description: '"
             class="text-pretty font-mono text-xs text-foreground print:text-[10px]"
           >
-            {{ project.description }}
+            {{ data.description }}
           </p>
           <!-- #endregion -->
         </div>
@@ -36,7 +36,7 @@
         <!-- #region stacks-->
         <li
           class="text-nowrap rounded-md border border-transparent bg-neutral-200 px-1 py-0 text-center text-[11px]"
-          *ngFor="let stack of project.stacks"
+          *ngFor="let stack of data.stacks"
         >
           {{ stack }}
         </li>
