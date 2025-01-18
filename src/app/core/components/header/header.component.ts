@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { NavigationLinkComponent } from '@app/shared/components/navigation-link/navigation-link.component';
+import { SectionHeadingComponent } from '@app/shared/components/section-heading/section-heading.component';
 import * as data from '@public/resume-data.json';
 
 interface Contact {
@@ -24,7 +25,7 @@ interface Props {
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, NavigationLinkComponent],
+  imports: [CommonModule, NavigationLinkComponent, SectionHeadingComponent],
   templateUrl: './header.component.html',
 })
 export class HeaderComponent {
