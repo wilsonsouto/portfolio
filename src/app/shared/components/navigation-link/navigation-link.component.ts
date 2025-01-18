@@ -1,5 +1,11 @@
 import { Component, Input } from '@angular/core';
 
+interface Props {
+  text: string | undefined;
+  ariaLabel: string | undefined;
+  url: string | undefined;
+}
+
 @Component({
   selector: 'app-navigation-link',
   standalone: true,
@@ -7,6 +13,5 @@ import { Component, Input } from '@angular/core';
   templateUrl: './navigation-link.component.html',
 })
 export class NavigationLinkComponent {
-  @Input() href: string | undefined = '';
-  @Input() value: string | undefined = '';
+  @Input() props: Props = { text: '', ariaLabel: '', url: '' };
 }

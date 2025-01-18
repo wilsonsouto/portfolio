@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 interface Props {
   text: string;
   ariaLabel: string;
-  size: 'text-xl' | 'text-2xl';
+  size: 'text-base' | 'text-lg' | 'text-xl' | 'text-2xl';
   border: boolean;
 }
 

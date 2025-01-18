@@ -6,55 +6,54 @@
     size: 'text-xl',
   }"
 />
-<article *ngFor="let data of experience" class="rounded-lg py-1 print:py-0">
+<article *ngFor="let data of experience">
   <header class="mb-4 flex items-center justify-between">
-    <div class="flex w-full flex-col gap-1 leading-none print:text-sm">
+    <div class="flex w-full flex-col gap-1 leading-none">
       <div class="item-center flex w-full justify-between">
-        <!-- #region role -->
-        <h2
-          [attr.aria-label]="'Role: ' + data.role"
-          class="font-bold leading-none print:text-[12px]"
-        >
-          {{ data.role }}
-        </h2>
-        <!-- #endregion -->
-
-        <!-- #region date-->
-        <app-date-span
-          [attr.aria-label]="'Date: ' + data.startDate + ' – ' + data.endDate"
-          [date]="data.startDate + ' – ' + data.endDate"
+        <app-section-heading
+          [props]="{
+            text: data.role,
+            ariaLabel: 'Role:' + data.role,
+            border: false,
+            size: 'text-base',
+          }"
         />
-        <!-- #endregion -->
+        <app-text-element
+          [props]="{
+            text: data.startDate + ' - ' + data.endDate,
+            ariaLabel: 'Date: ' + data.startDate + ' – ' + data.endDate,
+            type: 'paragraph',
+            width: 'w-full',
+            size: 'text-sm',
+          }"
+        />
       </div>
-      <div class="item-center flex w-full justify-between">
-        <!-- #region company-->
-        <h3 class="text-xs">
-          <app-navigation-link
-            [attr.aria-label]="'Company name: ' + data.company.name"
-            [href]="data.company.url"
-            [value]="data.company.name"
-          />
-        </h3>
-        <!-- #endregion -->
-      </div>
+      <app-navigation-link
+        [props]="{
+          text: data.company.name,
+          ariaLabel: 'Company name:' + data.company.name,
+          url: data.company.url,
+        }"
+      />
     </div>
   </header>
-  <!-- #region responsabilities -->
   <ul
     class="list-inside list-disc text-pretty text-xs text-neutral-800/80 print:mt-1 print:text-[10px]"
   >
-    <li
-      [attr.aria-label]="'Responsability: ' + responsability"
+    <app-text-element
       *ngFor="let responsability of data.responsabilities"
-    >
-      {{ responsability }}
-    </li>
+      [props]="{
+        text: responsability,
+        ariaLabel: 'Responsability: ' + responsability,
+        type: 'list',
+        width: 'w-full',
+        size: 'text-sm',
+      }"
+    />
   </ul>
-  <!-- #endregion -->
-  <!-- #region tech stacks -->
   <ul
     [attr.aria-label]="'Tech stacks'"
-    class="mt-2 flex list-none flex-wrap gap-x-1 gap-y-1 p-0 text-center text-xs font-medium text-foreground"
+    class="mt-2 flex list-none flex-wrap gap-x-1 gap-y-1 p-0 text-center text-xs font-semibold text-foreground print:hidden"
   >
     <li
       *ngFor="let stack of data.stacks"
@@ -63,5 +62,4 @@
       {{ stack }}
     </li>
   </ul>
-  <!-- #endregion -->
 </article>

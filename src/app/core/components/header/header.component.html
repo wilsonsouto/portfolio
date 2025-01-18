@@ -12,20 +12,22 @@
     }"
   />
   <app-text-element
-    [attr.aria-label]="data.description"
     [props]="{
       text: data.description,
       ariaLabel: 'description:' + data.description,
       type: 'paragraph',
       width: 'max-w-md',
+      size: 'text-base'
     }"
     class="print:hidden"
   />
   <app-navigation-link
-    [attr.aria-label]="'Location: ' + data.location.place"
-    [value]="data.location.place"
-    [href]="data.location.url"
-    class="text-sm print:justify-self-end print:text-base"
+    [props]="{
+      text: data.location.place,
+      ariaLabel: 'Location:' + data.location.place,
+      url: data.location.url,
+    }"
+    class="print:justify-self-end"
   />
   <nav aria-label="Contact links">
     <ul class="flex gap-x-1 text-foreground/80 sm:justify-start print:hidden">
@@ -74,9 +76,11 @@
       <ng-container *ngFor="let item of getPrintableContacts(); let i = index">
         <li class="flex flex-row gap-x-1">
           <app-navigation-link
-            [attr.aria-label]="item.label"
-            [href]="item.url"
-            [value]="item.label"
+            [props]="{
+              text: item.label,
+              ariaLabel: item.label,
+              url: item.url,
+            }"
           />
           <span *ngIf="i < getPrintableContacts().length - 1">|</span>
         </li>
@@ -85,17 +89,21 @@
     <div class="flex gap-x-1">
       <li>
         <app-navigation-link
-          [attr.aria-label]="'Email: ' + getEmail()"
-          [value]="getEmail().urlWithoutPrefix"
-          [href]="getEmail().fullUrl"
+          [props]="{
+            text: getEmail().urlWithoutPrefix,
+            url: getEmail().fullUrl,
+            ariaLabel: getEmail().urlWithoutPrefix,
+          }"
         />
       </li>
       |
       <li>
         <app-navigation-link
-          [attr.aria-label]="'Telephone: ' + getTelephone()"
-          [value]="getTelephone().urlWithoutPrefix"
-          [href]="getTelephone().fullUrl"
+          [props]="{
+            text: getTelephone().urlWithoutPrefix,
+            url: getTelephone().fullUrl,
+            ariaLabel: getTelephone().urlWithoutPrefix,
+          }"
         />
       </li>
     </div>
