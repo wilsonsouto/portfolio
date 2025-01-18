@@ -185,5 +185,31 @@
         "Kanban"
       ]
     }
+  ],
+  "projects": [
+    {
+      "name": "Pizzeria Donna",
+      "url": "https://github.com/wilsonsouto/pizzeria-donna",
+      "description": "Discreet chatbot assistance for women victims of domestic violence",
+      "stacks": [
+        "IBM Watson Assistant",
+        "Angular",
+        "TypeScript",
+        "HTML",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "name": "Candy Shop",
+      "url": "https://github.com/wilsonsouto/candy-shop",
+      "description": "Console app for candy inventory management",
+      "stacks": [".NET", "C#", "MySQL", "Spectre Console"]
+    },
+    {
+      "name": "File Organizer",
+      "url": "https://github.com/wilsonsouto/file-organizer",
+      "description": "A script that organizes files based on their extensions",
+      "stacks": [".NET", "C#"]
+    }
   ]
 }

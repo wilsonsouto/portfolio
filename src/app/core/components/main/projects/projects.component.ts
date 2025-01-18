@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { NavigationLinkComponent } from '@app/shared/components/navigation-link/navigation-link.component';
 import { SectionHeadingComponent } from '@app/shared/components/section-heading/section-heading.component';
-import { NavigationLinkComponent } from '../../../../shared/components/navigation-link/navigation-link.component';
+import * as data from '@public/resume-data.json';
 
-interface Project {
+interface Props {
   name: string;
   url: string;
   description: string;
@@ -17,31 +18,10 @@ interface Project {
   templateUrl: './projects.component.html',
 })
 export class ProjectsComponent {
-  projects: Project[] = [
-    {
-      name: 'Pizzeria Donna',
-      url: 'https://github.com/wilsonsouto/pizzeria-donna',
-      description:
-        'Discreet chatbot assistance for women victims of domestic violence ',
-      stacks: [
-        'IBM Watson Assistant',
-        'Angular',
-        'TypeScript',
-        'HTML',
-        'Tailwind CSS',
-      ],
-    },
-    {
-      name: 'Candy Shop',
-      url: 'https://github.com/wilsonsouto/candy-shop',
-      description: 'Console app for candy inventory management',
-      stacks: ['.NET', 'C#', 'MySQL', 'Spectre Console'],
-    },
-    {
-      name: 'File Organizer',
-      url: 'https://github.com/wilsonsouto/file-organizer',
-      description: 'A script that organizes files based on their extensions',
-      stacks: ['.NET', 'C#'],
-    },
-  ];
+  projects: Props[] = data.projects.map((project) => ({
+    name: project.name,
+    url: project.url,
+    description: project.description,
+    stacks: project.stacks,
+  }));
 }
