@@ -130,5 +130,60 @@
     "startDate": "2021",
     "endDate": "2022",
     "degree": " Associate's Degree in Systems Analysis and Development"
-  }
+  },
+  "skills": [
+    {
+      "topic": "Languages",
+      "stacks": ["C#", "HTML", "CSS/SASS", "TypeScript", "Bash (Shell)"]
+    },
+    {
+      "topic": "Frameworks and Libraries",
+      "stacks": [
+        ".NET",
+        "ASP.NET Core",
+        "Entity Framework (EF) Core",
+        "Angular",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "topic": "Design Principles and Architecture",
+      "stacks": [
+        "SOLID",
+        "Model-View-Controller (MVC)",
+        "Domain-Driven Design (DDD)",
+        "Microservices",
+        "Event-driven Architecture (EDA)"
+      ]
+    },
+    {
+      "topic": "Integration and Messaging",
+      "stacks": ["APIs (RESTful, HTTP, SOAP, GraphQL)", "RabbitMQ"]
+    },
+    {
+      "topic": "Data Management",
+      "stacks": [
+        "SQL (SQL Server, MySQL)",
+        "NoSQL (MongoDB, Elasticsearch, Redis)"
+      ]
+    },
+    {
+      "topic": "DevOps and Containers",
+      "stacks": ["Kubernetes", "Jenkins", "Docker"]
+    },
+    {
+      "topic": "Operating Systems",
+      "stacks": ["Linux (Ubuntu)", "Windows"]
+    },
+    {
+      "topic": "Development Tools and Methodologies",
+      "stacks": [
+        "Git",
+        "Postman",
+        "Test-Driven Development (TDD)",
+        "Scrum",
+        "Kanban"
+      ]
+    }
+  ]
 }
