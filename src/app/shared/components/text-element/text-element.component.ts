@@ -31,6 +31,6 @@ export class TextElementComponent {
     const hasBackground = this.props.background
       ? 'border border-transparent bg-neutral-200 rounded-md text-foreground text-center '
       : 'text-foreground/80';
-    return `text-pretty print:text-foreground ${this.props.width} ${this.props.size} ${this.props.padding} ${hasBold} ${hasBackground}`;
+    return `text-pretty print:text-foreground print:text-base ${this.props.width} ${this.props.size} ${this.props.padding} ${hasBold} ${hasBackground}`;
   }
 }

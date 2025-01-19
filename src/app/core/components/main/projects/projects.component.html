@@ -2,19 +2,21 @@
   [props]="{
     text: 'Side Projects',
     ariaLabel: 'Side Projects section',
-    border: true,
     size: 'text-xl',
+    border: true,
   }"
 />
 <div
-  class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2"
+  class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:flex print:grid-cols-3 print:flex-col print:gap-0"
 >
   <article *ngFor="let data of projects">
     <div
-      class="flex h-full flex-col overflow-hidden rounded-lg border p-3 md:min-h-44"
+      class="flex h-full min-h-36 flex-col overflow-hidden rounded-lg border p-3 print:min-h-0 print:border-none print:p-0"
     >
-      <div class="mb-2 flex flex-col space-y-1.5">
-        <div class="space-y-1">
+      <div
+        class="mb-2 flex flex-col space-y-1.5 print:justify-end print:space-y-0"
+      >
+        <div class="space-y-1 print:flex print:gap-x-1 print:space-y-0">
           <app-navigation-link
             [props]="{
               text: data.name,
@@ -28,7 +30,6 @@
               text: data.description,
               ariaLabel: data.description,
               type: 'paragraph',
-              width: 'w-full',
               size: 'text-sm',
             }"
           />
@@ -36,7 +37,7 @@
       </div>
       <ul
         [attr.aria-label]="'Technologies used'"
-        class="mt-auto flex flex-wrap gap-1"
+        class="mt-auto flex flex-wrap gap-1 print:hidden"
       >
         <app-text-element
           *ngFor="let stack of data.stacks"
@@ -44,7 +45,6 @@
             text: stack,
             ariaLabel: stack,
             type: 'list',
-            width: 'w-full',
             size: 'text-xs',
             bold: true,
             background: true,
