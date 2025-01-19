@@ -7,8 +7,8 @@
     [props]="{
       text: data.name,
       ariaLabel: 'Name:' + data.name,
-      border: false,
       size: 'text-2xl',
+      border: false,
     }"
   />
   <app-text-element
@@ -16,8 +16,8 @@
       text: data.description,
       ariaLabel: 'description:' + data.description,
       type: 'paragraph',
+      size: 'text-base',
       width: 'max-w-md',
-      size: 'text-base'
     }"
     class="print:hidden"
   />
@@ -38,7 +38,7 @@
               *ngSwitchCase="'button'"
               [attr.aria-label]="item.label"
               (click)="printWindow(item)"
-              class="focus-visible:ring-ring border-input inline-flex size-8 items-center justify-center whitespace-nowrap rounded-md border bg-background text-base font-medium ring-offset-background transition-colors hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+              class="focus-visible:ring-ring border-input inline-flex size-8 items-center justify-center whitespace-nowrap rounded-md border text-base font-medium ring-offset-background transition-colors hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
             >
               <i class="{{ item.icon }}"></i>
             </button>
@@ -87,25 +87,21 @@
       </ng-container>
     </div>
     <div class="flex gap-x-1">
-      <li>
-        <app-navigation-link
-          [props]="{
-            text: getEmail().urlWithoutPrefix,
-            url: getEmail().fullUrl,
-            ariaLabel: getEmail().urlWithoutPrefix,
-          }"
-        />
-      </li>
+      <app-navigation-link
+        [props]="{
+          text: getEmail().urlWithoutPrefix,
+          url: getEmail().fullUrl,
+          ariaLabel: getEmail().urlWithoutPrefix,
+        }"
+      />
       |
-      <li>
-        <app-navigation-link
-          [props]="{
-            text: getTelephone().urlWithoutPrefix,
-            url: getTelephone().fullUrl,
-            ariaLabel: getTelephone().urlWithoutPrefix,
-          }"
-        />
-      </li>
+      <app-navigation-link
+        [props]="{
+          text: getTelephone().urlWithoutPrefix,
+          url: getTelephone().fullUrl,
+          ariaLabel: getTelephone().urlWithoutPrefix,
+        }"
+      />
     </div>
   </ul>
 </div>

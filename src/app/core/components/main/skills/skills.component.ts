@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { SectionHeadingComponent } from '@app/shared/components/section-heading/section-heading.component';
 import * as data from '@public/resume-data.json';
+import { TextElementComponent } from "../../../../shared/components/text-element/text-element.component";
 
 interface Props {
   topic: string;
@@ -12,7 +13,7 @@ interface Props {
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [SectionHeadingComponent, CommonModule],
+  imports: [SectionHeadingComponent, CommonModule, TextElementComponent],
   templateUrl: './skills.component.html',
 })
 export class SkillsComponent {
