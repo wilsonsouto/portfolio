@@ -10,8 +10,8 @@ interface Contact {
   type: string;
   icon?: string;
   url?: string;
-  hidden: boolean;
-  printable: boolean;
+  screen: boolean;
+  print: boolean;
 }
 
 interface Props {
@@ -43,7 +43,7 @@ export class HeaderComponent {
       description: data.header.description,
       location: {
         place: data.header.location.place,
-        url: data.header.location.url,
+          url: data.header.location.url,
       },
       contact: data.header.contact,
       image: data.header.image,
@@ -61,48 +61,5 @@ export class HeaderComponent {
     }
 
     return undefined;
-  }
-
-  getEmail(): {
-    fullUrl: string | undefined;
-    urlWithoutPrefix: string | undefined;
-  } {
-    const findMailto = this.header
-      .map((x) => x.contact)
-      .flat()
-      .find((contact) => contact.url?.includes('mailto:'));
-
-    if (findMailto) {
-      const fullUrl = findMailto.url;
-      const urlWithoutPrefix = findMailto.url?.replace('mailto:', '');
-      return { fullUrl, urlWithoutPrefix };
-    }
-
-    return { fullUrl: undefined, urlWithoutPrefix: undefined };
-  }
-
-  getTelephone(): {
-    fullUrl: string | undefined;
-    urlWithoutPrefix: string | undefined;
-  } {
-    const findTelepehone = this.header
-      .map((x) => x.contact)
-      .flat()
-      .find((contact) => contact.url?.includes('tel:'));
-
-    if (findTelepehone) {
-      const fullUrl = findTelepehone.url;
-      const urlWithoutPrefix = findTelepehone.url?.replace('tel:', '');
-      return { fullUrl, urlWithoutPrefix };
-    }
-
-    return { fullUrl: undefined, urlWithoutPrefix: undefined };
-  }
-
-  getPrintableContacts(): any[] {
-    return this.header
-      .map((x) => x.contact)
-      .flat()
-      .filter((contact) => contact.printable);
   }
 }
