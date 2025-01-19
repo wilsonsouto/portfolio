@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { SectionHeadingComponent } from '@app/shared/components/section-heading/section-heading.component';
+import { TextElementComponent } from '@app/shared/components/text-element/text-element.component';
 import * as data from '@public/resume-data.json';
-import { TextElementComponent } from "../../../../shared/components/text-element/text-element.component";
 
 interface Props {
   topic: string;
@@ -34,6 +34,6 @@ export class SkillsComponent {
     if (Array.isArray(stacks)) {
       return stacks.join(', ');
     }
-    return stacks; 
+    return stacks;
   }
 }

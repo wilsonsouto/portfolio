@@ -7,8 +7,8 @@
   }"
 />
 <nav>
-  <ul class="space-y-2 print:hidden">
-    <li *ngFor="let skill of skills; let i = index">
+  <ul class="screen:block screen:space-y-2 print:hidden">
+    <ng-container *ngFor="let skill of skills; let i = index">
       <button
         [ngClass]="skill.isVisible ? 'bg-neutral-600' : 'bg-neutral-700'"
         (click)="toggleVisibility(i)"
@@ -31,26 +31,28 @@
           }"
         />
       </ul>
-    </li>
+    </ng-container>
   </ul>
-  <div class="hidden print:block" *ngFor="let skill of skills">
-    <app-text-element
-      [props]="{
-        text: skill.topic + ':',
-        ariaLabel: skill.topic,
-        type: 'paragraph',
-        size: 'text-base',
-        bold: true,
-      }"
-    />
-    <app-text-element
-      [props]="{
-        text: formatStacks(skill.stacks),
-        ariaLabel: formatStacks(skill.stacks),
-        type: 'paragraph',
-        size: 'text-base',
-        bold: false,
-      }"
-    />
-  </div>
+  <ul class="screen:hidden print:block">
+    <ng-container *ngFor="let skill of skills">
+      <app-text-element
+        [props]="{
+          text: skill.topic + ':',
+          ariaLabel: skill.topic,
+          type: 'list',
+          size: 'text-base',
+          bold: true,
+        }"
+      />
+      <app-text-element
+        [props]="{
+          text: formatStacks(skill.stacks),
+          ariaLabel: formatStacks(skill.stacks),
+          type: 'list',
+          size: 'text-base',
+          bold: false,
+        }"
+      />
+    </ng-container>
+  </ul>
 </nav>
