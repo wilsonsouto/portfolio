@@ -33,10 +33,10 @@
       </ul>
     </li>
   </ul>
-  <div class="hidden flex-col print:flex" *ngFor="let skill of skills">
+  <div class="hidden print:block" *ngFor="let skill of skills">
     <app-text-element
       [props]="{
-        text: skill.topic,
+        text: skill.topic + ':',
         ariaLabel: skill.topic,
         type: 'paragraph',
         size: 'text-base',
