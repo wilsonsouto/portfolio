@@ -100,7 +100,11 @@
         "Test-Driven Development (TDD)",
         "Grafana",
         "Consul"
-      ]
+      ],
+      "display": {
+        "screen": true,
+        "print": true
+      }
     },
     {
       "company": {
@@ -137,7 +141,11 @@
         "Postman",
         "User Interface (UI)",
         "User Experience (UX)"
-      ]
+      ],
+      "display": {
+        "screen": true,
+        "print": true
+      }
     }
   ],
   "education": {
