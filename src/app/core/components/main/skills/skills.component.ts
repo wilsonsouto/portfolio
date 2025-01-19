@@ -28,4 +28,11 @@ export class SkillsComponent {
         : (skill.isVisible = false);
     });
   }
+
+  formatStacks(stacks: string | string[]): string {
+    if (Array.isArray(stacks)) {
+      return stacks.join(', ');
+    }
+    return stacks; 
+  }
 }

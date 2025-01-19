@@ -7,7 +7,7 @@
   }"
 />
 <nav>
-  <ul class="space-y-2 text-pretty text-sm print:text-[12px]">
+  <ul class="space-y-2 text-pretty text-sm print:hidden print:text-[12px]">
     <li *ngFor="let skill of skills; let i = index">
       <button
         [ngClass]="skill.isVisible ? 'bg-neutral-600' : 'bg-neutral-700'"
@@ -29,4 +29,8 @@
       </ul>
     </li>
   </ul>
+  <li class="hidden print:inline-block" *ngFor="let skill of skills">
+    <span class="font-semibold">{{ skill.topic }}: </span>
+    <span>{{ formatStacks(skill.stacks) }}</span>
+  </li>
 </nav>
