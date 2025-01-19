@@ -36,7 +36,11 @@ module.exports = {
       },
       fontFamily: {
         charis: ["Charis SIL", "serif"]
-      }
+      },
+      screens: {
+        print: { raw: 'print' },
+        screen: { raw: 'screen' },
+      },
     },
   },
   plugins: [],

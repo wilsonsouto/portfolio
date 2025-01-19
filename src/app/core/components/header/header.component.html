@@ -1,7 +1,7 @@
 <!-- #region left content-->
 <section
   *ngFor="let data of header"
-  class="grid items-end space-y-1.5 print:grid-cols-2 print:space-y-0"
+  class="grid grid-cols-1 space-y-1.5 print:text-center"
 >
   <app-section-heading
     [props]="{
@@ -12,6 +12,7 @@
     }"
   />
   <app-text-element
+    class="print:hidden"
     [props]="{
       text: data.description,
       ariaLabel: 'description:' + data.description,
@@ -19,7 +20,6 @@
       size: 'text-base',
       width: 'max-w-md',
     }"
-    class="print:hidden"
   />
   <app-navigation-link
     [props]="{
@@ -27,12 +27,11 @@
       ariaLabel: 'Location:' + data.location.place,
       url: data.location.url,
     }"
-    class="print:justify-self-end"
   />
   <nav aria-label="Contact links">
     <ul class="flex gap-x-1 text-foreground/80 sm:justify-start print:hidden">
       <ng-container *ngFor="let item of data.contact">
-        <li *ngIf="!item.hidden">
+        <li *ngIf="item.screen">
           <ng-container [ngSwitch]="item.type">
             <button
               *ngSwitchCase="'button'"
@@ -62,47 +61,29 @@
 <!-- #region right content-->
 <div
   *ngFor="let data of header"
-  class="relative flex size-28 h-full shrink-0 items-start overflow-hidden rounded-xl print:size-full print:rounded-none"
+  class="screen:rounded-xl screen:overflow-hidden relative flex size-28 h-full shrink-0 items-start print:size-full print:w-full print:items-center print:justify-center print:rounded-none"
 >
   <img
-    class="aspect-square h-full w-full object-cover print:hidden"
+    class="screen:block aspect-square h-full w-full object-cover print:hidden"
     src="{{ data.image }}"
     alt="Profile picture"
   />
-  <ul
-    class="hidden w-full grid-cols-[1fr_auto] place-items-end justify-items-start space-y-1.5 text-pretty text-base print:grid print:space-y-0"
-  >
-    <div class="flex gap-x-1">
-      <ng-container *ngFor="let item of getPrintableContacts(); let i = index">
-        <li class="flex flex-row gap-x-1">
-          <app-navigation-link
-            [props]="{
-              text: item.label,
-              ariaLabel: item.label,
-              url: item.url,
-            }"
-          />
-          <span *ngIf="i < getPrintableContacts().length - 1">|</span>
-        </li>
-      </ng-container>
-    </div>
-    <div class="flex gap-x-1">
-      <app-navigation-link
-        [props]="{
-          text: getEmail().urlWithoutPrefix,
-          url: getEmail().fullUrl,
-          ariaLabel: getEmail().urlWithoutPrefix,
-        }"
-      />
-      |
-      <app-navigation-link
-        [props]="{
-          text: getTelephone().urlWithoutPrefix,
-          url: getTelephone().fullUrl,
-          ariaLabel: getTelephone().urlWithoutPrefix,
-        }"
-      />
-    </div>
-  </ul>
+  <ng-container *ngFor="let item of data.contact; let i = index">
+    <ul
+      *ngIf="item.print"
+      class="screen:hidden mr-4 flex items-center justify-center text-pretty text-center text-base"
+    >
+      <li class="flex flex-row items-center gap-x-1">
+        <i class="{{ item.icon }}"></i>
+        <app-navigation-link
+          [props]="{
+            text: item.label,
+            ariaLabel: item.label,
+            url: item.url,
+          }"
+        />
+      </li>
+    </ul>
+  </ng-container>
 </div>
 <!-- #endregion -->
