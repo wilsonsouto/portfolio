@@ -15,6 +15,10 @@ interface Props {
   role: string;
   responsabilities: string[];
   stacks: string[];
+  display: {
+    screen: boolean;
+    print: boolean;
+  };
 }
 
 @Component({
@@ -39,5 +43,9 @@ export class ExperienceComponent {
     role: experience.role,
     responsabilities: experience.responsabilities,
     stacks: experience.stacks,
+    display: {
+      screen: experience.display?.screen,
+      print: experience.display?.print,
+    },
   }));
 }

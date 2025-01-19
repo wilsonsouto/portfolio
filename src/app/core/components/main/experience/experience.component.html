@@ -3,67 +3,74 @@
     text: 'Work Experience',
     ariaLabel: 'Work Experience section',
     size: 'text-xl',
-    divider: true
+    divider: true,
   }"
 />
-<article *ngFor="let data of experience">
-  <header class="mb-4 flex items-center justify-between">
-    <div class="flex w-full flex-col gap-1 leading-none">
-      <div class="item-center flex w-full justify-between">
-        <app-section-heading
+<ng-container *ngFor="let data of experience">
+  <article
+    [ngClass]="{
+      'screen:hidden': !data.display.screen,
+      'print:hidden': !data.display.print,
+    }"
+  >
+    <header class="mb-4 flex items-center justify-between">
+      <div class="flex w-full flex-col gap-1 leading-none">
+        <div class="item-center flex w-full justify-between">
+          <app-section-heading
+            [props]="{
+              text: data.role,
+              ariaLabel: 'Role:' + data.role,
+              size: 'text-base',
+              divider: false,
+            }"
+          />
+          <app-text-element
+            [props]="{
+              text: data.startDate + ' - ' + data.endDate,
+              ariaLabel: 'Date: ' + data.startDate + ' – ' + data.endDate,
+              type: 'paragraph',
+              size: 'text-sm',
+            }"
+          />
+        </div>
+        <app-navigation-link
           [props]="{
-            text: data.role,
-            ariaLabel: 'Role:' + data.role,
-            size: 'text-base',
-            divider: false
-          }"
-        />
-        <app-text-element
-          [props]="{
-            text: data.startDate + ' - ' + data.endDate,
-            ariaLabel: 'Date: ' + data.startDate + ' – ' + data.endDate,
-            type: 'paragraph',
-            size: 'text-sm',
+            text: data.company.name,
+            ariaLabel: 'Company name:' + data.company.name,
+            url: data.company.url,
           }"
         />
       </div>
-      <app-navigation-link
+    </header>
+    <ul class="list-inside list-disc print:mt-1">
+      <app-text-element
+        *ngFor="let responsability of data.responsabilities"
         [props]="{
-          text: data.company.name,
-          ariaLabel: 'Company name:' + data.company.name,
-          url: data.company.url,
+          text: responsability,
+          ariaLabel: 'Responsability: ' + responsability,
+          type: 'list',
+          size: 'text-sm',
         }"
       />
-    </div>
-  </header>
-  <ul class="list-inside list-disc print:mt-1">
-    <app-text-element
-      *ngFor="let responsability of data.responsabilities"
-      [props]="{
-        text: responsability,
-        ariaLabel: 'Responsability: ' + responsability,
-        type: 'list',
-        size: 'text-sm',
-      }"
-    />
-  </ul>
-  <ul
-    [attr.aria-label]="'Tech stacks'"
-    class="mt-2 flex list-none flex-wrap gap-x-1 gap-y-1 p-0 print:hidden"
-  >
-    <app-text-element
-      *ngFor="let stack of data.stacks"
-      class="flex-grow"
-      [props]="{
-        text: stack,
-        ariaLabel: stack,
-        type: 'list',
-        width: 'w-full',
-        size: 'text-xs',
-        bold: true,
-        background: true,
-        padding: 'px-2 py-1',
-      }"
-    />
-  </ul>
-</article>
+    </ul>
+    <ul
+      [attr.aria-label]="'Tech stacks'"
+      class="mt-2 flex list-none flex-wrap gap-x-1 gap-y-1 p-0 print:hidden"
+    >
+      <app-text-element
+        *ngFor="let stack of data.stacks"
+        class="flex-grow"
+        [props]="{
+          text: stack,
+          ariaLabel: stack,
+          type: 'list',
+          width: 'w-full',
+          size: 'text-xs',
+          bold: true,
+          background: true,
+          padding: 'px-2 py-1',
+        }"
+      />
+    </ul>
+  </article>
+</ng-container>
