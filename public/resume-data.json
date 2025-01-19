@@ -68,13 +68,13 @@
       "endDate": "Present",
       "role": "Software Developer",
       "responsabilities": [
-        "Developed AI-powered chatbots that integrate with services utilizing the OpenAI API, boosting user engagement and automating interactions.",
+        "Developed AI-powered chatbots using ASP.NET Core and the OpenAI API, boosting user engagement and automating interactions.",
         "Developed and maintained scalable and high-performance RESTful APIs, improving system efficiency and reliability.",
         "Contributed to the operation and continuous optimization of microservices, ensuring seamless data flow and high efficiency in large-scale systems.",
         "Reduced RabbitMQ queue size by up to 60% with a simple, effective solution, optimizing data flow and improving operational efficiency.",
         "Administered SQL and NoSQL databases, including MySQL and Redis, to manage and store data efficiently.",
-        "Utilized containerization tools like Docker to ensure efficient deployment and scalability of applications.",
-        "Performed in-depth system analysis and troubleshooting to identify and resolve performance bottlenecks, ensuring optimal system operation."
+        "Utilized Jenkins for automated deployment pipelines and Docker for containerization, ensuring efficient deployment and scalability of applications.",
+        "Conducted system analysis and troubleshooting to identify and resolve performance bottlenecks, ensuring optimal operations."
       ],
       "stacks": [
         ".NET",
