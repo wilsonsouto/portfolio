@@ -3,8 +3,8 @@ import { Component, Input } from '@angular/core';
 interface Props {
   text: string;
   ariaLabel: string;
-  size: 'text-base' | 'text-lg' | 'text-xl' | 'text-2xl';
-  border: boolean;
+  size: 'text-base' | 'text-lg' | 'text-xl' | 'text-2xl' | 'text-3xl';
+  divider: boolean;
 }
 
 @Component({
@@ -17,14 +17,14 @@ export class SectionHeadingComponent {
   @Input() props: Props = {
     text: '',
     ariaLabel: '',
-    size: 'text-2xl',
-    border: false,
+    size: 'text-base',
+    divider: false,
   };
 
   addClasses() {
-    const hasBorder = this.props.border
-      ? 'print:border-b-[1px] print:border-black'
+    const hasDivider = this.props.divider
+      ? 'print:border-b-[1px] print:border-black print:uppercase print:tracking-wider print:text-lg'
       : '';
-    return `font-bold ${this.props.size} ${hasBorder}`;
+    return `font-bold ${this.props.size} ${hasDivider}`;
   }
 }

@@ -3,7 +3,7 @@
     text: 'Work Experience',
     ariaLabel: 'Work Experience section',
     size: 'text-xl',
-    border: true,
+    divider: true
   }"
 />
 <article *ngFor="let data of experience">
@@ -15,7 +15,7 @@
             text: data.role,
             ariaLabel: 'Role:' + data.role,
             size: 'text-base',
-            border: false,
+            divider: false
           }"
         />
         <app-text-element
