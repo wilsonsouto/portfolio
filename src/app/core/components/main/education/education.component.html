@@ -11,14 +11,13 @@
   class="flex w-full flex-col gap-2 leading-none sm:gap-1"
 >
   <header class="grid grid-cols-[1fr_auto] place-items-baseline">
-    <!-- #region degree -->
     <div class="inline-flex gap-x-1 leading-none">
       <app-section-heading
         [props]="{
           text: data.degree,
           ariaLabel: 'Degree:' + data.degree,
-          border: false,
           size: 'text-base',
+          border: false,
         }"
       />
     </div>
@@ -27,12 +26,10 @@
         text: data.startDate + ' - ' + data.endDate,
         ariaLabel: 'Date: ' + data.startDate + ' – ' + data.endDate,
         type: 'paragraph',
-        width: 'w-full',
         size: 'text-sm',
       }"
     />
   </header>
-  <!-- #region institution-->
   <app-navigation-link
     [props]="{
       text: data.institution.name,
@@ -40,5 +37,4 @@
       url: data.institution.url,
     }"
   />
-  <!-- #endregion -->
 </article>

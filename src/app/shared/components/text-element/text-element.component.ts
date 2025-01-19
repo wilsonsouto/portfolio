@@ -5,8 +5,11 @@ interface Props {
   text: string;
   ariaLabel: string;
   type: 'paragraph' | 'list';
-  width: 'max-w-md' | 'w-full';
   size: 'text-xs' | 'text-sm' | 'text-base';
+  width?: 'max-w-md' | 'w-full';
+  padding?: 'px-1 py-0' | 'px-2 py-1';
+  bold?: boolean;
+  background?: boolean;
 }
 
 @Component({
@@ -20,11 +23,14 @@ export class TextElementComponent {
     text: '',
     ariaLabel: '',
     type: 'paragraph',
-    width: 'w-full',
     size: 'text-base',
   };
 
   addClasses() {
-    return `text-pretty text-base text-foreground/80 print:text-foreground ${this.props.width} ${this.props.size}`;
+    const hasBold = this.props.bold ? 'font-bold' : 'font-normal';
+    const hasBackground = this.props.background
+      ? 'border border-transparent bg-neutral-200 rounded-md text-foreground text-center '
+      : 'text-foreground/80';
+    return `text-pretty print:text-foreground ${this.props.width} ${this.props.size} ${this.props.padding} ${hasBold} ${hasBackground}`;
   }
 }

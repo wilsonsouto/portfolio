@@ -4,6 +4,7 @@ interface Props {
   text: string | undefined;
   ariaLabel: string | undefined;
   url: string | undefined;
+  bold?: boolean;
 }
 
 @Component({
@@ -13,5 +14,10 @@ interface Props {
   templateUrl: './navigation-link.component.html',
 })
 export class NavigationLinkComponent {
-  @Input() props: Props = { text: '', ariaLabel: '', url: '' };
+  @Input() props: Props = { text: '', ariaLabel: '', url: '', bold: false };
+
+  addClasses() {
+    const hasBold = this.props.bold ? 'font-bold' : 'font-normal';
+    return `group text-base leading-none hover:underline print:underline print:hover:no-underline ${hasBold}`;
+  }
 }
