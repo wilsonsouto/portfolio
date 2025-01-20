@@ -1,6 +1,6 @@
 <section
   *ngFor="let data of header"
-  class="grid grid-cols-1 space-y-1.5 print:text-center"
+  class="grid grid-cols-1 space-y-1.5 print:place-items-center"
 >
   <app-section-heading
     [props]="{
@@ -29,11 +29,10 @@
     }"
   />
   <nav aria-label="Contact links">
-    <ul
-      class="screen:print:items-start screen::justify-start screen:text-foreground/80 print: flex gap-x-1 text-foreground print:items-center print:justify-center"
-    >
+    <ul class="flex gap-1">
       <ng-container *ngFor="let item of data.contact">
         <li
+          class="screen:text-foreground/80"
           [ngClass]="{
             'print:hidden': item.display.screen,
           }"
@@ -44,7 +43,7 @@
               *ngSwitchCase="'button'"
               [attr.aria-label]="item.label"
               (click)="printWindow(item)"
-              class="focus-visible:ring-ring border-input inline-flex size-8 items-center justify-center whitespace-nowrap rounded-md border text-base font-medium ring-offset-background transition-colors hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+              class="inline-flex size-8 items-center justify-center rounded-md border hover:bg-neutral-100"
             >
               <i class="{{ item.icon }}"></i>
             </button>
@@ -53,7 +52,7 @@
                 [attr.aria-label]="item.label"
                 [href]="item.url"
                 target="_blank"
-                class="focus-visible:ring-ring border-input inline-flex size-8 items-center justify-center whitespace-nowrap rounded-md border bg-background text-base font-medium ring-offset-background transition-colors hover:bg-neutral-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+                class="inline-flex size-8 items-center justify-center rounded-md border hover:bg-neutral-100"
               >
                 <i class="{{ item.icon }}"></i>
               </a>
@@ -67,15 +66,15 @@
           *ngIf="item.display.print"
         >
           <ng-container [ngSwitch]="item.type">
-            <li *ngSwitchCase="'list'">
+            <li class="mr-2">
               <a
-                class="mr-2 flex items-center gap-x-1 underline"
+                class="flex items-center space-x-1.5"
                 [attr.aria-label]="item.label"
                 [href]="item.url"
                 target="_blank"
               >
                 <i class="{{ item.icon }}"></i>
-                <span>{{ item.label }}</span>
+                <span class="underline">{{ item.label }}</span>
               </a>
             </li>
           </ng-container>
@@ -86,10 +85,10 @@
 </section>
 <div
   *ngFor="let data of header"
-  class="screen:rounded-xl screen:overflow-hidden relative flex size-28 h-full shrink-0 items-start print:size-full print:w-full print:items-center print:justify-center print:rounded-none"
+  class="flex size-28 h-full shrink-0 items-start overflow-hidden rounded-xl print:hidden"
 >
   <img
-    class="screen:block aspect-square h-full w-full object-cover print:hidden"
+    class="block aspect-square h-full w-full object-cover"
     src="{{ data.image }}"
     alt="Profile picture"
   />

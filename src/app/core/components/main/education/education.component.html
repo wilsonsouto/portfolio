@@ -6,21 +6,16 @@
     divider: true,
   }"
 />
-<article
-  *ngFor="let data of education"
-  class="flex w-full flex-col gap-2 leading-none sm:gap-1"
->
-  <header class="grid grid-cols-[1fr_auto] place-items-baseline">
-    <div class="inline-flex gap-x-1 leading-none">
-      <app-section-heading
-        [props]="{
-          text: data.degree,
-          ariaLabel: 'Degree:' + data.degree,
-          size: 'text-base',
-          divider: false,
-        }"
-      />
-    </div>
+<article *ngFor="let data of education" class="flex w-full flex-col">
+  <header class="grid grid-cols-[1fr_auto] place-items-baseline gap-1">
+    <app-section-heading
+      [props]="{
+        text: data.degree,
+        ariaLabel: 'Degree:' + data.degree,
+        size: 'text-base',
+        divider: false,
+      }"
+    />
     <app-text-element
       [props]="{
         text: data.startDate + ' - ' + data.endDate,
