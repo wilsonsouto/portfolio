@@ -38,8 +38,8 @@ module.exports = {
         charis: ["Charis SIL", "serif"]
       },
       screens: {
-        print: { raw: 'print' },
         screen: { raw: 'screen' },
+        print: { raw: 'print' },
       },
     },
   },
