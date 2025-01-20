@@ -10,8 +10,10 @@ interface Contact {
   type: string;
   icon?: string;
   url?: string;
-  screen: boolean;
-  print: boolean;
+  display: {
+    screen: boolean;
+    print: boolean;
+  };
 }
 
 interface Props {
@@ -43,7 +45,7 @@ export class HeaderComponent {
       description: data.header.description,
       location: {
         place: data.header.location.place,
-          url: data.header.location.url,
+        url: data.header.location.url,
       },
       contact: data.header.contact,
       image: data.header.image,
