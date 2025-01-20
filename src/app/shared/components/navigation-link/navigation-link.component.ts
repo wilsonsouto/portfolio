@@ -18,6 +18,6 @@ export class NavigationLinkComponent {
 
   addClasses() {
     const hasBold = this.props.bold ? 'font-bold' : 'font-normal';
-    return `group text-base leading-none hover:underline print:underline print:hover:no-underline ${hasBold}`;
+    return `group text-base hover:underline print:underline print:hover:no-underline ${hasBold}`;
   }
 }

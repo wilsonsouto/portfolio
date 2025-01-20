@@ -7,12 +7,12 @@
   }"
 />
 <nav>
-  <ul class="screen:block screen:space-y-2 print:hidden">
+  <ul class="space-y-1.5 screen:block print:hidden">
     <ng-container *ngFor="let skill of skills; let i = index">
       <button
         [ngClass]="skill.isVisible ? 'bg-neutral-600' : 'bg-neutral-700'"
         (click)="toggleVisibility(i)"
-        class="flex w-full items-center justify-between gap-x-2 rounded-md px-4 py-2 text-left text-background hover:bg-neutral-600"
+        class="flex w-full items-center justify-between rounded-md px-4 py-2 text-left text-background hover:bg-neutral-600"
       >
         <span [attr.aria-label]="skill.topic">{{ skill.topic }}</span>
         <i
@@ -50,7 +50,6 @@
           ariaLabel: formatStacks(skill.stacks),
           type: 'list',
           size: 'text-base',
-          bold: false,
         }"
       />
     </ng-container>
