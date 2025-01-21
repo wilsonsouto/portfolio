@@ -6,6 +6,7 @@ interface Props {
   size: 'text-base' | 'text-xl' | 'text-2xl';
   divider: boolean;
   isPrintHeader?: boolean;
+  color: boolean;
 }
 
 @Component({
@@ -21,15 +22,15 @@ export class SectionHeadingComponent {
     size: 'text-base',
     divider: false,
     isPrintHeader: false,
+    color: false,
   };
 
   addClasses() {
     const hasDivider = this.props.divider
       ? 'print:border-b-[1px] print:border-black print:uppercase print:tracking-wider print:text-lg'
       : '';
-    const isPrintHeader = this.props.isPrintHeader
-      ? 'print:text-3xl'
-      : '';
-    return `font-bold ${this.props.size} ${hasDivider} ${isPrintHeader}`;
+    const isPrintHeader = this.props.isPrintHeader ? 'print:text-3xl' : '';
+    const hasColor = this.props.color ? 'screen:text-accent' : '';
+    return `font-bold ${this.props.size} ${hasDivider} ${isPrintHeader} ${hasColor}`;
   }
 }

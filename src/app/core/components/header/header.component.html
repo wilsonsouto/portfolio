@@ -9,6 +9,7 @@
       size: 'text-2xl',
       divider: false,
       isPrintHeader: true,
+      color: true,
     }"
   />
   <app-text-element
@@ -60,23 +61,22 @@
           </ng-container>
         </li>
         <li
+          class="mr-2"
           [ngClass]="{
             'screen:hidden': item.display.print,
           }"
           *ngIf="item.display.print"
         >
           <ng-container [ngSwitch]="item.type">
-            <li class="mr-2">
-              <a
-                class="flex items-center space-x-1.5"
-                [attr.aria-label]="item.label"
-                [href]="item.url"
-                target="_blank"
-              >
-                <i class="{{ item.icon }}"></i>
-                <span class="underline">{{ item.label }}</span>
-              </a>
-            </li>
+            <a
+              class="flex items-center space-x-1.5"
+              [attr.aria-label]="item.label"
+              [href]="item.url"
+              target="_blank"
+            >
+              <i class="{{ item.icon }}"></i>
+              <span class="underline">{{ item.label }}</span>
+            </a>
           </ng-container>
         </li>
       </ng-container>
