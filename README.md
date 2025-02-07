@@ -32,11 +32,11 @@
 
 ## :sparkles: Features
 
-:heavy_check_mark: **About**: A brief description about myself;\
-:heavy_check_mark: **Work Experience**: Details about my professional experiences, including previous jobs and responsibilities;\
-:heavy_check_mark: **Education**: Overview about my academic backgrounds;\
-:heavy_check_mark: **Skills**: A summary of my technical expertise and proficiencies;\
-:heavy_check_mark: **Side Projects**: Highlights of the projects I have worked on;
+:heavy_check_mark: **About**: A brief description about myself.\
+:heavy_check_mark: **Work Experience**: Details about my professional experiences, including previous jobs and responsibilities.\
+:heavy_check_mark: **Education**: Overview about my academic backgrounds.\
+:heavy_check_mark: **Skills**: A summary of my technical expertise and proficiencies.\
+:heavy_check_mark: **Side Projects**: Highlights of the projects I have worked on.
 
 ## :rocket: Technologies
 
@@ -57,7 +57,7 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 # Clone this project
 $ git clone https://github.com/wilsonsouto/portfolio
 
-# Access
+# Access the project folder
 $ cd portfolio
 
 # Install dependencies
@@ -73,7 +73,7 @@ $ npm start
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE) file.
 
-Made with :heart: by <a href="https://github.com/wilsonsouto" target="_blank">wilsonsouto</a>
+Made with :heart: by [wilsonsouto](https://github.com/wilsonsouto)
 
 &#xa0;
 
