@@ -30,10 +30,5 @@ export class SkillsComponent {
     });
   }
 
-  formatStacks(stacks: string | string[]): string {
-    if (Array.isArray(stacks)) {
-      return stacks.join(', ');
-    }
-    return stacks;
-  }
+  formatStacks = (text: string[]): string => text.join(', ') + '.';
 }
