@@ -16,15 +16,14 @@ interface Props {
 }
 
 @Component({
-  selector: 'app-education',
-  standalone: true,
-  imports: [
-    CommonModule,
-    SectionHeadingComponent,
-    NavigationLinkComponent,
-    TextElementComponent,
-  ],
-  templateUrl: './education.component.html',
+    selector: 'app-education',
+    imports: [
+        CommonModule,
+        SectionHeadingComponent,
+        NavigationLinkComponent,
+        TextElementComponent,
+    ],
+    templateUrl: './education.component.html'
 })
 export class EducationComponent {
   education: Props[] = [

@@ -8,17 +8,16 @@ import { ProjectsComponent } from '@app/core/components/main/projects/projects.c
 import { SkillsComponent } from '@app/core/components/main/skills/skills.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    CommonModule,
-    HeaderComponent,
-    AboutComponent,
-    ExperienceComponent,
-    EducationComponent,
-    SkillsComponent,
-    ProjectsComponent,
-  ],
-  templateUrl: './app.component.html',
+    selector: 'app-root',
+    imports: [
+        CommonModule,
+        HeaderComponent,
+        AboutComponent,
+        ExperienceComponent,
+        EducationComponent,
+        SkillsComponent,
+        ProjectsComponent,
+    ],
+    templateUrl: './app.component.html'
 })
 export class AppComponent {}

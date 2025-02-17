@@ -13,10 +13,9 @@ interface Props {
 }
 
 @Component({
-  selector: 'app-text-element',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './text-element.component.html',
+    selector: 'app-text-element',
+    imports: [CommonModule],
+    templateUrl: './text-element.component.html'
 })
 export class TextElementComponent {
   @Input() props: Props = {
