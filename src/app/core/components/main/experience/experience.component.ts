@@ -22,15 +22,14 @@ interface Props {
 }
 
 @Component({
-  selector: 'app-experience',
-  standalone: true,
-  imports: [
-    CommonModule,
-    SectionHeadingComponent,
-    NavigationLinkComponent,
-    TextElementComponent,
-  ],
-  templateUrl: './experience.component.html',
+    selector: 'app-experience',
+    imports: [
+        CommonModule,
+        SectionHeadingComponent,
+        NavigationLinkComponent,
+        TextElementComponent,
+    ],
+    templateUrl: './experience.component.html'
 })
 export class ExperienceComponent {
   experience: Props[] = data.experience.map((experience) => ({

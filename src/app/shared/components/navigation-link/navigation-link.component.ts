@@ -8,10 +8,9 @@ interface Props {
 }
 
 @Component({
-  selector: 'app-navigation-link',
-  standalone: true,
-  imports: [],
-  templateUrl: './navigation-link.component.html',
+    selector: 'app-navigation-link',
+    imports: [],
+    templateUrl: './navigation-link.component.html'
 })
 export class NavigationLinkComponent {
   @Input() props: Props = { text: '', ariaLabel: '', url: '', bold: false };

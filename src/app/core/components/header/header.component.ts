@@ -28,15 +28,14 @@ interface Props {
 }
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [
-    CommonModule,
-    NavigationLinkComponent,
-    SectionHeadingComponent,
-    TextElementComponent,
-  ],
-  templateUrl: './header.component.html',
+    selector: 'app-header',
+    imports: [
+        CommonModule,
+        NavigationLinkComponent,
+        SectionHeadingComponent,
+        TextElementComponent,
+    ],
+    templateUrl: './header.component.html'
 })
 export class HeaderComponent {
   header: Props[] = [

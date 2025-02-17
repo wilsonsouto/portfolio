@@ -10,10 +10,9 @@ interface Props {
 }
 
 @Component({
-  selector: 'app-section-heading',
-  standalone: true,
-  imports: [],
-  templateUrl: './section-heading.component.html',
+    selector: 'app-section-heading',
+    imports: [],
+    templateUrl: './section-heading.component.html'
 })
 export class SectionHeadingComponent {
   @Input() props: Props = {
