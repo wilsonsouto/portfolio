@@ -13,15 +13,14 @@ interface Props {
 }
 
 @Component({
-  selector: 'app-projects',
-  standalone: true,
-  imports: [
-    CommonModule,
-    SectionHeadingComponent,
-    NavigationLinkComponent,
-    TextElementComponent,
-  ],
-  templateUrl: './projects.component.html',
+    selector: 'app-projects',
+    imports: [
+        CommonModule,
+        SectionHeadingComponent,
+        NavigationLinkComponent,
+        TextElementComponent,
+    ],
+    templateUrl: './projects.component.html'
 })
 export class ProjectsComponent {
   projects: Props[] = data.projects.map((project) => ({

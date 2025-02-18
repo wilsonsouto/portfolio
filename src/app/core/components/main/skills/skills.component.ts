@@ -11,10 +11,9 @@ interface Props {
 }
 
 @Component({
-  selector: 'app-skills',
-  standalone: true,
-  imports: [SectionHeadingComponent, CommonModule, TextElementComponent],
-  templateUrl: './skills.component.html',
+    selector: 'app-skills',
+    imports: [SectionHeadingComponent, CommonModule, TextElementComponent],
+    templateUrl: './skills.component.html'
 })
 export class SkillsComponent {
   skills: Props[] = data.skills.map((skill) => ({

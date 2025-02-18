@@ -4,7 +4,7 @@
     ariaLabel: 'Work Experience section',
     size: 'text-xl',
     divider: true,
-    color: true
+    color: true,
   }"
 />
 <ng-container *ngFor="let data of experience">
@@ -60,7 +60,7 @@
     >
       <app-text-element
         *ngFor="let stack of data.stacks"
-        class="flex-grow"
+        class="grow"
         [props]="{
           text: stack,
           ariaLabel: stack,
