@@ -1,8 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&display=swap')
+layer(base);
+@import 'tailwindcss';
 
+@config "../tailwind.config.js";
+
+@theme {
+  --color-background: #ffffff;
+  --color-foreground: #111111;
+
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f4f4f4;
+  --color-neutral-200: #e6e6e6;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a2a2a2;
+  --color-neutral-500: #727272;
+  --color-neutral-600: #535353;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #272727;
+  --color-neutral-900: #181818;
+
+  --color-accent: #0E5484;
+
+  --font-charis: Charis SIL, serif;
+}
 @media print {
     @page {
         size:a4;
