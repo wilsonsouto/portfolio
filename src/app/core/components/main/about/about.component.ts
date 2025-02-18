@@ -9,10 +9,9 @@ interface Props {
 }
 
 @Component({
-  selector: 'app-about',
-  standalone: true,
-  imports: [SectionHeadingComponent, CommonModule, TextElementComponent],
-  templateUrl: './about.component.html',
+    selector: 'app-about',
+    imports: [SectionHeadingComponent, CommonModule, TextElementComponent],
+    templateUrl: './about.component.html'
 })
 export class AboutComponent {
   about: Props[] = [{ about: data.about }];
