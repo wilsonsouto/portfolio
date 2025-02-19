@@ -1,6 +1,6 @@
 <section
   *ngFor="let data of header"
-  class="grid grid-cols-1 space-y-1.5 print:place-items-center"
+  class="grid grid-cols-1 gap-1.5 print:place-items-center"
 >
   <app-section-heading
     [props]="{
@@ -69,7 +69,7 @@
         >
           <ng-container [ngSwitch]="item.type">
             <a
-              class="flex items-center space-x-1.5"
+              class="flex items-center gap-1.5"
               [attr.aria-label]="item.label"
               [href]="item.url"
               target="_blank"

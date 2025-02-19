@@ -9,7 +9,7 @@
 />
 <ng-container *ngFor="let data of experience">
   <article
-    class="space-y-1.5"
+    class="flex flex-col gap-1.5"
     [ngClass]="{
       'screen:hidden': !data.display.screen,
       'print:hidden': !data.display.print,

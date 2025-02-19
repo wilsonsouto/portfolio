@@ -8,7 +8,7 @@
   }"
 />
 <nav>
-  <ul class="screen:block space-y-1.5 print:hidden">
+  <ul class="screen:flex flex-col gap-1.5 print:hidden">
     <ng-container *ngFor="let skill of skills; let i = index">
       <button
         [ngClass]="skill.isVisible ? 'bg-neutral-600' : 'bg-neutral-700'"
@@ -20,7 +20,7 @@
           [ngClass]="skill.isVisible ? 'fa fa-arrow-up' : 'fa fa-arrow-down'"
         ></i>
       </button>
-      <ul *ngIf="skill.isVisible" class="mt-2 ml-6 space-y-1">
+      <ul *ngIf="skill.isVisible" class="mt-2 ml-6">
         <app-text-element
           *ngFor="let item of skill.stacks"
           [props]="{
