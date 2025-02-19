@@ -16,7 +16,9 @@
     }"
   >
     <header class="flex flex-col items-start">
-      <div class="grid w-full grid-cols-[1fr_auto] place-items-baseline gap-1">
+      <div
+        class="grid w-full grid-cols-[1fr_auto] place-items-baseline gap-1.5"
+      >
         <app-section-heading
           [props]="{
             text: data.role,
@@ -43,7 +45,7 @@
         }"
       />
     </header>
-    <ul class="list-inside list-disc">
+    <div class="list-inside list-disc">
       <app-text-element
         *ngFor="let responsability of data.responsabilities"
         [props]="{
@@ -53,10 +55,10 @@
           size: 'text-sm',
         }"
       />
-    </ul>
-    <ul
+    </div>
+    <div
       [attr.aria-label]="'Tech stacks'"
-      class="flex flex-wrap gap-1 print:hidden"
+      class="flex list-none flex-wrap gap-1 print:hidden"
     >
       <app-text-element
         *ngFor="let stack of data.stacks"
@@ -72,6 +74,6 @@
           padding: 'px-2 py-1',
         }"
       />
-    </ul>
+    </div>
   </article>
 </ng-container>
