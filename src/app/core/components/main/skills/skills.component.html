@@ -20,7 +20,7 @@
           [ngClass]="skill.isVisible ? 'fa fa-arrow-up' : 'fa fa-arrow-down'"
         ></i>
       </button>
-      <ul *ngIf="skill.isVisible" class="mt-2 ml-6">
+      <ul *ngIf="skill.isVisible" class="ml-6">
         <app-text-element
           *ngFor="let item of skill.stacks"
           [props]="{
