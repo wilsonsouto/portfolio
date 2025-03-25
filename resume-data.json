@@ -93,11 +93,11 @@
         "C#",
         "Object-Oriented Programming (OOP)",
         "ASP.NET Core",
-        "Entity Framework (EF) Core",
-        "Model-View-Controller (MVC)",
+        "SOLID",
         "Domain-Driven Design (DDD)",
         "Microservices",
         "Event-driven Architecture (EDA)",
+        "Clean Architecture",
         "REST APIs",
         "GraphQL",
         "RabbitMQ",
@@ -188,15 +188,16 @@
       "topic": "Design Principles and Architecture",
       "stacks": [
         "SOLID",
-        "Model-View-Controller (MVC)",
         "Domain-Driven Design (DDD)",
+        "Model-View-Controller (MVC)",
         "Microservices",
-        "Event-driven Architecture (EDA)"
+        "Event-driven Architecture (EDA)",
+        "Clean Architecture"
       ]
     },
     {
       "topic": "Integration and Messaging",
-      "stacks": ["APIs (RESTful, HTTP, SOAP, GraphQL)", "RabbitMQ"]
+      "stacks": ["APIs (REST, SOAP, GraphQL)", "RabbitMQ"]
     },
     {
       "topic": "Data Management",
@@ -206,8 +207,8 @@
       ]
     },
     {
-      "topic": "DevOps and Containers",
-      "stacks": ["Kubernetes", "Jenkins", "Docker"]
+      "topic": "Containerization",
+      "stacks": ["Docker", "Kubernetes", "Jenkins"]
     },
     {
       "topic": "Operating Systems",
