@@ -1,0 +1,20 @@
+{
+  "extends": ["config:base"],
+  "automerge": true,
+  "automergeType": "branch",
+  "commitMessagePrefix": "chore(deps): ",
+  "dependencyDashboard": false,
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    },
+    {
+      "matchUpdateTypes": ["major"],
+      "automerge": false
+    }
+  ],
+  "platformAutomerge": true,
+  "requireStatusChecks": false,
+  "updateInternalDeps": true
+}
