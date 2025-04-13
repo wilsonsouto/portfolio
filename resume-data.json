@@ -1,0 +1,253 @@
+{
+  "header": {
+    "name": "Wilson Souto",
+    "description": "Software Developer focused on generating value by solving problems and building solutions",
+    "location": {
+      "place": "São Paulo, SP, Brazil",
+      "url": "https://www.google.com/maps/place/S%C3%A3o+Paulo"
+    },
+    "contact": [
+      {
+        "label": "Portfolio",
+        "url": "https://wilsonsouto.github.io/portfolio/",
+        "icon": "fa-solid fa-briefcase",
+        "type": "list",
+        "display": {
+          "screen": false,
+          "print": true
+        }
+      },
+      {
+        "label": "Email",
+        "url": "mailto:wilsonsouto@outlook.com.br",
+        "icon": "fa-solid fa-envelope",
+        "type": "list",
+        "display": {
+          "screen": true,
+          "print": true
+        }
+      },
+      {
+        "label": "Mobile",
+        "url": "tel:+5511941862376",
+        "icon": "fa-solid fa-phone",
+        "type": "list",
+        "display": {
+          "screen": true,
+          "print": true
+        }
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/wilsonsouto",
+        "icon": "fa-brands fa-github",
+        "type": "list",
+        "display": {
+          "screen": true,
+          "print": true
+        }
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://linkedin.com/in/wilsonsouto",
+        "icon": "fa-brands fa-linkedin-in",
+        "type": "list",
+        "display": {
+          "screen": true,
+          "print": true
+        }
+      },
+      {
+        "label": "Resume",
+        "icon": "fa-solid fa-file-pdf",
+        "type": "button",
+        "display": {
+          "screen": true,
+          "print": false
+        }
+      }
+    ],
+    "image": "profile-picture.jpeg"
+  },
+  "about": "Dedicated and results-oriented Software Developer with expertise in systems analysis and development, focused on generating value by solving problems and building solutions. Proven track record of delivering high-quality, efficient software that drives business success in sectors such as technology consulting, AI, and finance.",
+  "experience": [
+    {
+      "company": {
+        "name": "Intervalor",
+        "url": "https://intervalor.com.br/"
+      },
+      "startDate": "2023",
+      "endDate": "Present",
+      "role": "Software Developer",
+      "responsabilities": [
+        "Developed AI-powered chatbots using ASP.NET Core and the OpenAI API, boosting user engagement and automating interactions.",
+        "Developed and maintained scalable and high-performance REST APIs, improving system efficiency and reliability.",
+        "Contributed to the operation and continuous optimization of microservices, ensuring seamless data flow and high efficiency in large-scale systems.",
+        "Reduced RabbitMQ queue size by up to 60% with a simple, effective solution, optimizing data flow and improving operational efficiency.",
+        "Administered SQL and NoSQL databases, including MySQL and Redis, to manage and store data efficiently.",
+        "Utilized Jenkins for automated deployment pipelines and Docker for containerization, ensuring efficient deployment and scalability of applications.",
+        "Conducted system analysis and troubleshooting to identify and resolve performance bottlenecks, ensuring optimal operations."
+      ],
+      "stacks": [
+        ".NET",
+        "C#",
+        "ASP.NET Core",
+        "SOLID",
+        "Domain-Driven Design (DDD)",
+        "Microservices",
+        "Event-driven Architecture (EDA)",
+        "Clean Architecture",
+        "REST APIs",
+        "GraphQL",
+        "RabbitMQ",
+        "MySQL",
+        "Elasticsearch",
+        "Redis",
+        "Docker",
+        "Kubernetes",
+        "Jenkins",
+        "Git",
+        "Postman",
+        "Test-Driven Development (TDD)",
+        "Grafana",
+        "Consul"
+      ],
+      "display": {
+        "screen": true,
+        "print": true
+      }
+    },
+    {
+      "company": {
+        "name": "IBM",
+        "url": "https://www.ibm.com/br-pt"
+      },
+      "startDate": "2021",
+      "endDate": "2022",
+      "role": "Developer Intern",
+      "responsabilities": [
+        "Developed innovative solutions using IBM Watson Assistant, IBM Cloud, and IBM Storage, enhancing system efficiency.",
+        "Created clean, maintainable, and scalable software components in C# by applying object-oriented programming principles.",
+        "Enhanced data management and CRUD operations by integrating SQL Server and Entity Framework into ASP.NET Core.",
+        "Built and tested responsive, user-friendly web applications using Angular, TypeScript, HTML, and CSS/SASS, improving user experience and interface design.",
+        "Actively participated in Agile sprint meetings, contributing to planning, execution, and code review processes."
+      ],
+      "stacks": [
+        "IBM Watson Assistant",
+        "IBM Cloud",
+        "IBM Storage",
+        ".NET",
+        "C#",
+        "Object-Oriented Programming (OOP)",
+        "ASP.NET Core",
+        "Entity Framework Core",
+        "Model-View-Controller (MVC)",
+        "SQL Server",
+        "Angular",
+        "TypeScript",
+        "HTML",
+        "CSS",
+        "SASS",
+        "Git",
+        "Postman",
+        "User Interface (UI)",
+        "User Experience (UX)"
+      ],
+      "display": {
+        "screen": true,
+        "print": true
+      }
+    }
+  ],
+  "education": {
+    "institution": {
+      "name": "FIAP",
+      "url": "https://www.fiap.com.br/"
+    },
+    "startDate": "2021",
+    "endDate": "2022",
+    "degree": " Associate's Degree in Systems Analysis and Development"
+  },
+  "skills": [
+    {
+      "topic": "Languages",
+      "stacks": ["C#", "HTML", "CSS/SASS", "TypeScript", "Bash (Shell)"]
+    },
+    {
+      "topic": "Frameworks and Libraries",
+      "stacks": [
+        ".NET",
+        "ASP.NET Core",
+        "Entity Framework Core",
+        "Angular",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "topic": "Design Principles and Architecture",
+      "stacks": [
+        "SOLID",
+        "Domain-Driven Design (DDD)",
+        "Model-View-Controller (MVC)",
+        "Microservices",
+        "Event-driven Architecture (EDA)",
+        "Clean Architecture"
+      ]
+    },
+    {
+      "topic": "Integration and Messaging",
+      "stacks": ["APIs (REST, SOAP, GraphQL)", "RabbitMQ"]
+    },
+    {
+      "topic": "Data Management",
+      "stacks": [
+        "SQL (SQL Server, MySQL)",
+        "NoSQL (MongoDB, Elasticsearch, Redis)"
+      ]
+    },
+    {
+      "topic": "Cloud and DevOps",
+      "stacks": ["Docker", "Kubernetes", "Jenkins"]
+    },
+    {
+      "topic": "Operating Systems",
+      "stacks": ["Linux (Ubuntu)", "Windows"]
+    },
+    {
+      "topic": "Development Tools and Methodologies",
+      "stacks": [
+        "Git",
+        "Postman",
+        "Test-Driven Development (TDD)",
+        "Scrum",
+        "Kanban"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Pizzeria Donna",
+      "url": "https://github.com/wilsonsouto/pizzeria-donna",
+      "description": "Discreet chatbot assistance for women victims of domestic violence.",
+      "stacks": [
+        "IBM Watson Assistant",
+        "Angular",
+        "TypeScript",
+        "HTML",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "name": "File Organizer",
+      "url": "https://github.com/wilsonsouto/file-organizer",
+      "description": "Automates file organization by sorting them into folders based on their extensions.",
+      "stacks": [".NET", "C#"]
+    },
+    {
+      "name": "Candy Shop",
+      "url": "https://github.com/wilsonsouto/candy-shop",
+      "description": "Console app for managing a candy store's inventory with database integration.",
+      "stacks": [".NET", "C#", "MySQL", "Spectre Console"]
+    }
+  ]
+}
