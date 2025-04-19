@@ -78,10 +78,10 @@
       },
       "startDate": "2023",
       "endDate": "Present",
-      "role": "Software Developer",
+      "role": "Junior Software Developer",
       "responsabilities": [
         "Developed AI-powered chatbots using ASP.NET Core and the OpenAI API, boosting user engagement and automating interactions.",
-        "Developed and maintained scalable and high-performance REST APIs, improving system efficiency and reliability.",
+        "Developed and maintained scalable and high-performance RESTful APIs, improving system efficiency and reliability.",
         "Contributed to the operation and continuous optimization of microservices, ensuring seamless data flow and high efficiency in large-scale systems.",
         "Reduced RabbitMQ queue size by up to 60% with a simple, effective solution, optimizing data flow and improving operational efficiency.",
         "Administered SQL and NoSQL databases, including MySQL and Redis, to manage and store data efficiently.",
@@ -124,11 +124,11 @@
       },
       "startDate": "2021",
       "endDate": "2022",
-      "role": "Developer Intern",
+      "role": "Software Developer Intern",
       "responsabilities": [
         "Developed innovative solutions using IBM Watson Assistant, IBM Cloud, and IBM Storage, enhancing system efficiency.",
         "Created clean, maintainable, and scalable software components in C# by applying object-oriented programming principles.",
-        "Enhanced data management and CRUD operations by integrating SQL Server and Entity Framework into ASP.NET Core.",
+        "Enhanced data management and CRUD operations by integrating SQL Server and Entity Framework Core into ASP.NET Core.",
         "Built and tested responsive, user-friendly web applications using Angular, TypeScript, HTML, and CSS/SASS, improving user experience and interface design.",
         "Actively participated in Agile sprint meetings, contributing to planning, execution, and code review processes."
       ],
@@ -178,7 +178,7 @@
       "stacks": [
         ".NET",
         "ASP.NET Core",
-        "Entity Framework Core",
+        "Entity Framework (EF) Core",
         "Angular",
         "Tailwind CSS"
       ]
@@ -206,7 +206,7 @@
       ]
     },
     {
-      "topic": "Cloud and DevOps",
+      "topic": "Containerization",
       "stacks": ["Docker", "Kubernetes", "Jenkins"]
     },
     {
