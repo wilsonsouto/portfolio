@@ -81,7 +81,7 @@
       "role": "Junior Software Developer",
       "responsabilities": [
         "Developed AI-powered chatbots using ASP.NET Core and the OpenAI API, boosting user engagement and automating interactions.",
-        "Developed and maintained scalable and high-performance RESTful APIs, improving system efficiency and reliability.",
+        "Developed and maintained scalable and high-performance REST APIs, improving system efficiency and reliability.",
         "Contributed to the operation and continuous optimization of microservices, ensuring seamless data flow and high efficiency in large-scale systems.",
         "Reduced RabbitMQ queue size by up to 60% with a simple, effective solution, optimizing data flow and improving operational efficiency.",
         "Administered SQL and NoSQL databases, including MySQL and Redis, to manage and store data efficiently.",
@@ -120,7 +120,7 @@
     {
       "company": {
         "name": "IBM",
-        "url": "https://www.ibm.com/br-pt"
+        "url": "https://www.ibm.com/us-en"
       },
       "startDate": "2021",
       "endDate": "2022",
@@ -178,7 +178,7 @@
       "stacks": [
         ".NET",
         "ASP.NET Core",
-        "Entity Framework (EF) Core",
+        "Entity Framework Core",
         "Angular",
         "Tailwind CSS"
       ]
@@ -206,7 +206,7 @@
       ]
     },
     {
-      "topic": "Containerization",
+      "topic": "Cloud and DevOps",
       "stacks": ["Docker", "Kubernetes", "Jenkins"]
     },
     {
