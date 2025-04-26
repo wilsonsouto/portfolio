@@ -77,7 +77,7 @@
         "url": "https://intervalor.com.br/"
       },
       "startDate": "2023",
-      "endDate": "Present",
+      "endDate": "2025",
       "role": "Junior Software Developer",
       "responsabilities": [
         "Developed AI-powered chatbots using ASP.NET Core and the OpenAI API, boosting user engagement and automating interactions.",
@@ -104,13 +104,12 @@
         "Elasticsearch",
         "Redis",
         "Docker",
-        "Kubernetes",
         "Jenkins",
+        "Kubernetes",
+        "Grafana",
         "Git",
         "Postman",
-        "Test-Driven Development (TDD)",
-        "Grafana",
-        "Consul"
+        "Test-Driven Development (TDD)"
       ],
       "display": {
         "screen": true,
@@ -206,8 +205,14 @@
       ]
     },
     {
-      "topic": "Cloud and DevOps",
-      "stacks": ["Docker", "Kubernetes", "Jenkins"]
+      "topic": "Observability and Monitoring",
+      "stacks": [
+        "Grafana"
+      ]
+    },
+    {
+      "topic": "DevOps and Cloud",
+      "stacks": ["Docker", "Jenkins", "Kubernetes", "AWS"]
     },
     {
       "topic": "Operating Systems",
